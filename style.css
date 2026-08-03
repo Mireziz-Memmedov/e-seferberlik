@@ -3,19 +3,25 @@ body {
   font-weight: 500;
 }
 
+.imgbox {
+  overflow: hidden;
+}
+.imgbox img {
+  width: 100%;
+}
+
+section {
+  padding: 50px 0;
+}
+
 #start {
-  background-image: url(Assets/arxa_fon_welcome.png);
   font-family: "Montserrat", sans-serif;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-attachment: fixed;
 }
 
 #welcome-header {
   background: rgba(118, 118, 118, 0.25);
   backdrop-filter: blur(10px);
-  padding: 25px 0;
+  padding: 10px 0;
   position: fixed;
   top: 0;
   right: 0;
@@ -27,15 +33,15 @@ body {
   align-items: center;
 }
 #welcome-header .box .imgbox img {
-  width: 80px;
+  width: 100px;
 }
 #welcome-header .box .text h2 {
-  color: #F5C542;
+  color: #7c7d67;
   margin-bottom: 5px;
   font-weight: 700;
 }
 #welcome-header .box .text p {
-  color: #ffffff;
+  color: #7c7d67;
 }
 #welcome-header nav a {
   color: #000000;
@@ -81,6 +87,9 @@ body {
   color: #c0a916;
 }
 
+#welcome {
+  padding: 130px 0 0;
+}
 #welcome .box {
   margin-bottom: 20px;
 }

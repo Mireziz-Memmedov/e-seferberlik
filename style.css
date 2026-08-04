@@ -238,6 +238,9 @@ section {
   backdrop-filter: blur(12px);
   border-bottom: 1px solid rgba(0, 0, 0, 0.08);
 }
+#login-header .brand * {
+  cursor: pointer;
+}
 #login-header .brand {
   display: flex;
   align-items: center;
@@ -384,21 +387,6 @@ section {
   font-size: 13px;
 }
 
-#login-footer {
-  width: 100%;
-  border-top: 1px solid rgba(0, 0, 0, 0.06);
-  color: #888;
-  font-size: 14px;
-}
-#login-footer a {
-  color: #7c7d67;
-  text-decoration: none;
-  transition: 0.3s;
-}
-#login-footer a:hover {
-  color: #c0a916;
-}
-
 @media (max-width: 576px) {
   #login-page #login-header .brand .brand-logo img {
     width: 50px;
@@ -433,9 +421,5 @@ section {
   }
   #login-page #login .login-card #asan-login {
     min-height: 60px;
-  }
-  #login-page #login-footer {
-    padding: 15px 0;
-    font-size: 12px;
   }
 }/*# sourceMappingURL=style.css.map */

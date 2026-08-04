@@ -232,10 +232,8 @@ section {
 }
 
 #login-header {
+  padding: 20px 0;
   width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   background: rgba(255, 255, 255, 0.8);
   backdrop-filter: blur(12px);
   border-bottom: 1px solid rgba(0, 0, 0, 0.08);
@@ -253,15 +251,15 @@ section {
   margin-left: 12px;
 }
 #login-header .brand .brand-text h1 {
+  margin: 0;
   color: #7c7d67;
   font-size: 25px;
   font-weight: 700;
-  margin: 0;
 }
 #login-header .brand .brand-text p {
+  margin: 2px 0 0;
   color: #7c7d67;
   font-size: 14px;
-  margin: 2px 0 0;
 }
 #login-header .language {
   display: flex;
@@ -289,77 +287,8 @@ section {
   flex: 1;
   width: 100%;
   display: flex;
-  justify-content: center;
   align-items: center;
-  padding: 60px 5%;
-}
-#login .login-wrapper {
-  width: 100%;
-  max-width: 1100px;
-  display: grid;
-  grid-template-columns: 1fr 430px;
-  gap: 80px;
-  align-items: center;
-}
-#login .login-info {
-  max-width: 580px;
-}
-#login .login-info .subtitle {
-  display: inline-block;
-  margin-bottom: 15px;
-  color: #c0a916;
-  font-size: 14px;
-  font-weight: 700;
-  letter-spacing: 2px;
-}
-#login .login-info h2 {
-  margin: 0 0 20px;
-  color: #212529;
-  font-size: 48px;
-  line-height: 1.15;
-  font-weight: 700;
-}
-#login .login-info h2 span {
-  color: #7c7d67;
-}
-#login .login-info > p {
-  max-width: 520px;
-  margin-bottom: 35px;
-  color: #666;
-  font-size: 18px;
-  line-height: 1.6;
-}
-#login .login-info .features {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-#login .login-info .features .feature {
-  display: flex;
-  align-items: center;
-}
-#login .login-info .features .feature .icon {
-  width: 35px;
-  height: 35px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-right: 15px;
-  border-radius: 50%;
-  background: rgba(124, 125, 103, 0.12);
-  color: #7c7d67;
-  font-weight: 700;
-}
-#login .login-info .features .feature h3 {
-  margin: 0;
-  color: #212529;
-  font-size: 18px;
-  font-weight: 700;
-}
-#login .login-info .features .feature p {
-  margin: 2px 0 0;
-  color: #777;
-  font-size: 14px;
+  padding: 60px 0;
 }
 #login .login-card {
   padding: 40px 35px;
@@ -400,7 +329,7 @@ section {
   min-height: 65px;
   display: flex;
   align-items: center;
-  padding: 10px 15px;
+  padding: 10px 5px;
   border: 1px solid #7c7d67;
   border-radius: 12px;
   background: #7c7d67;
@@ -457,10 +386,6 @@ section {
 
 #login-footer {
   width: 100%;
-  padding: 20px 5%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   border-top: 1px solid rgba(0, 0, 0, 0.06);
   color: #888;
   font-size: 14px;
@@ -474,34 +399,7 @@ section {
   color: #c0a916;
 }
 
-@media (max-width: 992px) {
-  #login-page #login .login-wrapper {
-    grid-template-columns: 1fr;
-    gap: 40px;
-    max-width: 600px;
-  }
-  #login-page #login .login-info {
-    max-width: 100%;
-    text-align: center;
-  }
-  #login-page #login .login-info h2 {
-    font-size: 40px;
-  }
-  #login-page #login .login-info > p {
-    margin-left: auto;
-    margin-right: auto;
-  }
-  #login-page #login .login-info .features {
-    align-items: center;
-  }
-  #login-page #login .login-card {
-    width: 100%;
-  }
-}
 @media (max-width: 576px) {
-  #login-page #login-header {
-    padding: 12px 20px;
-  }
   #login-page #login-header .brand .brand-logo img {
     width: 50px;
   }
@@ -519,23 +417,7 @@ section {
     font-size: 12px;
   }
   #login-page #login {
-    padding: 40px 20px;
-  }
-  #login-page #login .login-wrapper {
-    gap: 30px;
-  }
-  #login-page #login .login-info .subtitle {
-    font-size: 12px;
-    letter-spacing: 1.5px;
-  }
-  #login-page #login .login-info h2 {
-    font-size: 32px;
-  }
-  #login-page #login .login-info > p {
-    font-size: 16px;
-  }
-  #login-page #login .login-info .features {
-    display: none;
+    padding: 40px 0;
   }
   #login-page #login .login-card {
     padding: 30px 20px;
@@ -553,7 +435,7 @@ section {
     min-height: 60px;
   }
   #login-page #login-footer {
-    padding: 15px 20px;
+    padding: 15px 0;
     font-size: 12px;
   }
 }/*# sourceMappingURL=style.css.map */

@@ -291,7 +291,7 @@ section {
   width: 100%;
   display: flex;
   align-items: center;
-  padding: 60px 0;
+  padding: 40px 0;
 }
 #login .login-card {
   padding: 40px 35px;
@@ -407,6 +407,44 @@ section {
   transform: translateY(-2px);
   box-shadow: 0 7px 20px rgba(0, 0, 0, 0.12);
 }
+#login .login-card #faq {
+  margin-top: 5px;
+  width: 100%;
+  min-height: 65px;
+  display: flex;
+  align-items: center;
+  padding: 10px 5px;
+  border: 1px solid #7c7d67;
+  border-radius: 12px;
+  background: #7c7d67;
+  color: #fff;
+  font-family: "Dosis", sans-serif;
+  cursor: pointer;
+  transition: 0.3s;
+}
+#login .login-card #faq .button-icon {
+  width: 40px;
+  font-size: 20px;
+}
+#login .login-card #faq .button-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+#login .login-card #faq .button-content strong {
+  font-size: 17px;
+  font-weight: 700;
+}
+#login .login-card #faq .arrow {
+  font-size: 22px;
+}
+#login .login-card #faq:hover {
+  background: #c0a916;
+  border-color: #c0a916;
+  transform: translateY(-2px);
+  box-shadow: 0 7px 20px rgba(0, 0, 0, 0.12);
+}
 #login .login-card .security {
   display: flex;
   align-items: center;
@@ -461,6 +499,9 @@ section {
     min-height: 60px;
   }
   #login-page #login .login-card #guest-login {
+    min-height: 60px;
+  }
+  #login-page #login .login-card #faq {
     min-height: 60px;
   }
 }/*# sourceMappingURL=style.css.map */

@@ -227,7 +227,7 @@ section {
   display: flex;
   flex-direction: column;
   background: #f5f5f2;
-  font-family: "Dosis", sans-serif;
+  font-family: "Inter", sans-serif;
   color: #212529;
 }
 
@@ -327,6 +327,9 @@ section {
   font-size: 15px;
   line-height: 1.5;
 }
+#login .login-card #asan-login *, #login .login-card #guest-login *, #login .login-card #faq * {
+  cursor: pointer;
+}
 #login .login-card #asan-login {
   width: 100%;
   min-height: 65px;
@@ -338,7 +341,6 @@ section {
   background: #7c7d67;
   color: #fff;
   font-family: "Dosis", sans-serif;
-  cursor: pointer;
   transition: 0.3s;
 }
 #login .login-card #asan-login .button-icon {
@@ -381,7 +383,6 @@ section {
   background: #7c7d67;
   color: #fff;
   font-family: "Dosis", sans-serif;
-  cursor: pointer;
   transition: 0.3s;
 }
 #login .login-card #guest-login .button-icon {
@@ -419,7 +420,6 @@ section {
   background: #7c7d67;
   color: #fff;
   font-family: "Dosis", sans-serif;
-  cursor: pointer;
   transition: 0.3s;
 }
 #login .login-card #faq .button-icon {
@@ -477,8 +477,8 @@ section {
     font-size: 12px;
   }
   #login-page #login-header .language span {
-    padding: 4px;
-    font-size: 12px;
+    padding: 0;
+    font-size: 9px;
   }
   #login-page #login {
     padding: 40px 0;
@@ -490,18 +490,145 @@ section {
   #login-page #login .login-card .card-header .card-icon {
     width: 48px;
     height: 48px;
-    font-size: 21px;
+    font-size: 16px;
   }
   #login-page #login .login-card .card-header h2 {
-    font-size: 23px;
+    font-size: 18px;
   }
-  #login-page #login .login-card #asan-login {
+  #login-page #login .login-card #asan-login, #login-page #login .login-card #guest-login, #login-page #login .login-card #faq {
     min-height: 60px;
   }
-  #login-page #login .login-card #guest-login {
-    min-height: 60px;
+  #login-page #login .login-card #asan-login strong, #login-page #login .login-card #guest-login strong, #login-page #login .login-card #faq strong {
+    font-size: 12px;
   }
-  #login-page #login .login-card #faq {
-    min-height: 60px;
+  #login-page #login .login-card #asan-login small, #login-page #login .login-card #guest-login small, #login-page #login .login-card #faq small {
+    font-size: 11px;
+  }
+}
+#faq-page {
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  background: #f5f5f2;
+  font-family: "Inter", sans-serif;
+  color: #212529;
+}
+
+#faq-header {
+  padding: 20px 0;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+}
+#faq-header .brand * {
+  cursor: pointer;
+}
+#faq-header .brand {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+#faq-header .brand .brand-logo img {
+  width: 65px;
+  display: block;
+}
+#faq-header .brand .brand-text {
+  margin-left: 12px;
+}
+#faq-header .brand .brand-text h1 {
+  margin: 0;
+  color: #7c7d67;
+  font-size: 25px;
+  font-weight: 700;
+}
+#faq-header .brand .brand-text p {
+  margin: 2px 0 0;
+  color: #7c7d67;
+  font-size: 14px;
+}
+#faq-header .language {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+#faq-header .language span {
+  padding: 5px 8px;
+  color: #777;
+  font-size: 14px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+#faq-header .language span:hover {
+  color: #c0a916;
+}
+#faq-header .language span.active {
+  color: #7c7d67;
+  font-weight: 700;
+  background: rgba(124, 125, 103, 0.1);
+}
+
+#faq .faq-question * {
+  cursor: pointer;
+}
+#faq .faq-question {
+  width: 100%;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  border-radius: 10px;
+  padding: 10px;
+  background-color: #7c7d67;
+  color: #ffffff;
+}
+#faq .faq-question:hover {
+  background: #c0a916;
+  border-color: #c0a916;
+  transform: translateY(-2px);
+  box-shadow: 0 7px 20px rgba(0, 0, 0, 0.12);
+}
+#faq .faq-question .button-content {
+  flex: 1;
+  text-align: left;
+}
+#faq .faq-question .arrow {
+  flex-shrink: 0;
+  margin-left: auto;
+}
+#faq .faq-answer {
+  display: none;
+  padding: 15px 20px;
+  background: #ffffff;
+  border-radius: 0 0 10px 10px;
+}
+#faq .faq-answer p {
+  margin: 0;
+}
+
+@media (max-width: 576px) {
+  #faq-page #faq-header .brand .brand-logo img {
+    width: 50px;
+  }
+  #faq-page #faq-header .brand .brand-text {
+    margin-left: 8px;
+  }
+  #faq-page #faq-header .brand .brand-text h1 {
+    font-size: 20px;
+  }
+  #faq-page #faq-header .brand .brand-text p {
+    font-size: 12px;
+  }
+  #faq-page #faq-header .language span {
+    padding: 0;
+    font-size: 9px;
+  }
+  #faq-page #faq .faq-question strong {
+    font-size: 14px;
+  }
+  #faq-page #faq .faq-answer p {
+    font-size: 12px;
   }
 }/*# sourceMappingURL=style.css.map */

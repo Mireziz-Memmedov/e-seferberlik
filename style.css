@@ -611,6 +611,10 @@ section {
 #faq .faq-item .faq-answer p {
   margin: 0;
 }
+#faq .faq-item .faq-answer a {
+  color: #0008ef;
+  text-decoration: underline;
+}
 
 @media (max-width: 576px) {
   #faq-page #faq-header .brand .brand-logo img {

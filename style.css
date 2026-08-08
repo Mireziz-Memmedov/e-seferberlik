@@ -806,6 +806,9 @@ section {
   #guest-page #guest-header .menu {
     box-shadow: none;
   }
+  #guest-page #guest-header .menu::before {
+    display: none;
+  }
   #guest-page #guest-header .menu nav {
     display: none !important;
   }

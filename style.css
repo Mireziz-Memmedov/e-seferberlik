@@ -728,8 +728,9 @@ section {
   position: absolute;
   top: 0;
   bottom: 0;
-  left: -100vw;
-  right: -100vw;
+  left: 50%;
+  width: 100vw;
+  transform: translateX(-50%);
   background-color: #7c7d67;
   z-index: -1;
 }
@@ -803,12 +804,6 @@ section {
   }
 }
 @media (max-width: 830px) {
-  #guest-page #guest-header .menu {
-    box-shadow: none;
-  }
-  #guest-page #guest-header .menu::before {
-    display: none;
-  }
   #guest-page #guest-header .menu nav {
     display: none !important;
   }

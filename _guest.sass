@@ -7,8 +7,12 @@
     color: #212529
 
 #guest-header
-    padding: 20px 0 0
+    position: fixed
+    top: 0
+    left: 0
     width: 100%
+    z-index: 1000
+    padding: 20px 0 0
     background: rgba(255, 255, 255, 0.8)
     backdrop-filter: blur(12px)
     border-bottom: 1px solid rgba(0, 0, 0, 0.08)
@@ -83,12 +87,12 @@
         .box
             .icon
                 i
-                    color: #d1cfcf
+                    color: #ffffff
                     font-size: 30px
                     cursor: pointer
         nav
             a
-                color: #d1cfcf
+                color: #ffffff
                 margin-left: 30px
                 font-size: 16px
                 &:hover
@@ -100,7 +104,7 @@
             background-color: #7c7d67
             border-radius: 10%
             h5
-                color: #d1cfcf
+                color: #ffffff
                 font-size: 10px
                 &:hover
                     h5
@@ -162,6 +166,8 @@
         #guest-header
 
             .menu
+                box-shadow: none
+                
                 nav
                     display: none !important
 

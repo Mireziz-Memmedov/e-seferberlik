@@ -515,8 +515,12 @@ section {
 }
 
 #faq-header {
-  padding: 20px 0;
+  position: fixed;
+  top: 0;
+  left: 0;
   width: 100%;
+  z-index: 1000;
+  padding: 20px 0;
   background: rgba(255, 255, 255, 0.8);
   backdrop-filter: blur(12px);
   border-bottom: 1px solid rgba(0, 0, 0, 0.08);
@@ -569,6 +573,9 @@ section {
   background: rgba(124, 125, 103, 0.1);
 }
 
+#faq {
+  padding: 120px 0 0;
+}
 #faq .faq-item {
   margin-bottom: 10px;
 }
@@ -602,7 +609,7 @@ section {
   margin-left: auto;
 }
 #faq .faq-item .faq-answer {
-  margin: none;
+  margin: 0;
   display: none;
   padding: 15px 20px;
   background: #ffffff;
@@ -650,8 +657,12 @@ section {
 }
 
 #guest-header {
-  padding: 20px 0 0;
+  position: fixed;
+  top: 0;
+  left: 0;
   width: 100%;
+  z-index: 1000;
+  padding: 20px 0 0;
   background: rgba(255, 255, 255, 0.8);
   backdrop-filter: blur(12px);
   border-bottom: 1px solid rgba(0, 0, 0, 0.08);
@@ -723,12 +734,12 @@ section {
   z-index: -1;
 }
 #guest-header .menu .box .icon i {
-  color: #d1cfcf;
+  color: #ffffff;
   font-size: 30px;
   cursor: pointer;
 }
 #guest-header .menu nav a {
-  color: #d1cfcf;
+  color: #ffffff;
   margin-left: 30px;
   font-size: 16px;
 }
@@ -743,7 +754,7 @@ section {
   border-radius: 10%;
 }
 #guest-header .menu .minimenu h5 {
-  color: #d1cfcf;
+  color: #ffffff;
   font-size: 10px;
 }
 #guest-header .menu .minimenu h5:hover h5 {
@@ -792,6 +803,9 @@ section {
   }
 }
 @media (max-width: 830px) {
+  #guest-page #guest-header .menu {
+    box-shadow: none;
+  }
   #guest-page #guest-header .menu nav {
     display: none !important;
   }

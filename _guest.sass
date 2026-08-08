@@ -61,6 +61,58 @@
                 font-weight: 700
                 background: rgba(124, 125, 103, 0.1)
 
+    .menu
+        padding: 20px
+        display: flex
+        justify-content: space-around
+        align-items: center
+
+        .box
+            .icon
+                i
+                    color: #7c7d67
+                    font-size: 30px
+        nav
+            a
+                color: #d1cfcf
+                margin-left: 30px
+                font-size: 16px
+                &:hover
+                    color: #c0a916
+                    cursor: pointer
+        .minimenu
+            position: relative
+            display: none
+            background-color: #7c7d67
+            border-radius: 10%
+            h5
+                color: #ffffff
+                font-size: 10px
+                &:hover
+                    h5
+                        color: #c0a916
+
+            .dropdown
+                display: none
+                position: absolute
+                background-color: #7c7d67
+                min-width: 60px
+                box-shadow: 0 2px 6px #7c7c7c
+                top: 100%
+                left: 0
+                z-index: 100
+                border-radius: 0 10px 10px
+
+                .option
+                    display: flex
+                    flex-direction: column
+                    a
+                        color: #ffffff
+                        margin: 5px
+                        &:hover
+                            cursor: pointer
+                            color: #c0a916
+
 @media (max-width: 576px)
 
     #guest-page
@@ -88,3 +140,31 @@
                 span
                     padding: 0
                     font-size: 9px
+
+@media (max-width: 830px)
+    #guest-page
+
+        #guest-header
+
+            .menu
+                nav
+                    display: none !important
+
+                .minimenu
+                    display: block
+                    width: 40px
+                    height: 25px
+                    border: 2px solid #767373
+                    border-radius: 6px
+
+                    .btn
+                        width: 100%
+                        height: 100%
+                        padding: 0
+                        display: flex
+                        align-items: center
+                        justify-content: center
+
+                        h5
+                            margin: 0
+                            font-size: 10px

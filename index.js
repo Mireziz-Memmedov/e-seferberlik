@@ -15,24 +15,26 @@ $(document).ready(function () {
         window.location.href = "./faq.html";
     });
 
-    //chatbot
-    const chatbotButton = $('.chatbot-button');
+    // chatbot
+    const chatbotButton = document.querySelector(".chatbot-button");
 
-    if (chatbotButton.length) {
+    if (chatbotButton) {
 
         let isDragging = false;
-        let startX;
-        let startY;
-        let startLeft;
-        let startTop;
         let moved = false;
 
-        chatbotButton.on('pointerdown', function (e) {
+        let startX = 0;
+        let startY = 0;
+
+        let startLeft = 0;
+        let startTop = 0;
+
+        chatbotButton.addEventListener("pointerdown", function (e) {
 
             isDragging = true;
             moved = false;
 
-            const rect = this.getBoundingClientRect();
+            const rect = chatbotButton.getBoundingClientRect();
 
             startX = e.clientX;
             startY = e.clientY;
@@ -40,86 +42,104 @@ $(document).ready(function () {
             startLeft = rect.left;
             startTop = rect.top;
 
-            $(this).css({
-                right: 'auto',
-                bottom: 'auto',
-                left: startLeft + 'px',
-                top: startTop + 'px',
-                cursor: 'grabbing'
-            });
+            // right / bottom artıq istifadə olunmasın
+            chatbotButton.style.right = "auto";
+            chatbotButton.style.bottom = "auto";
 
-            this.setPointerCapture(e.pointerId);
+            chatbotButton.style.left = startLeft + "px";
+            chatbotButton.style.top = startTop + "px";
+
+            chatbotButton.classList.add("dragging");
+
+            // Ən vacib hissə
+            chatbotButton.setPointerCapture(e.pointerId);
 
             e.preventDefault();
         });
 
 
-        chatbotButton.on('pointermove', function (e) {
+        document.addEventListener("pointermove", function (e) {
 
             if (!isDragging) return;
 
-            const x = e.clientX - startX;
-            const y = e.clientY - startY;
+            const deltaX = e.clientX - startX;
+            const deltaY = e.clientY - startY;
 
-            if (Math.abs(x) > 5 || Math.abs(y) > 5) {
+            if (Math.abs(deltaX) > 3 || Math.abs(deltaY) > 3) {
                 moved = true;
             }
 
-            const buttonWidth = chatbotButton.outerWidth();
-            const buttonHeight = chatbotButton.outerHeight();
+            const buttonWidth = chatbotButton.offsetWidth;
+            const buttonHeight = chatbotButton.offsetHeight;
 
             const gap = 30;
 
-            let newLeft = startLeft + x;
-            let newTop = startTop + y;
+            let newLeft = startLeft + deltaX;
+            let newTop = startTop + deltaY;
 
-            // Sol sərhəd
-            if (newLeft < gap) {
-                newLeft = gap;
-            }
 
-            // Sağ sərhəd
-            if (newLeft + buttonWidth > $(window).width() - gap) {
-                newLeft = $(window).width() - buttonWidth - gap;
-            }
+            // SOL
+            newLeft = Math.max(
+                gap,
+                newLeft
+            );
 
-            // Yuxarı sərhəd
-            if (newTop < gap) {
-                newTop = gap;
-            }
 
-            // Aşağı sərhəd
-            if (newTop + buttonHeight > $(window).height() - gap) {
-                newTop = $(window).height() - buttonHeight - gap;
-            }
+            // SAĞ
+            newLeft = Math.min(
+                newLeft,
+                window.innerWidth - buttonWidth - gap
+            );
 
-            chatbotButton.css({
-                left: newLeft + 'px',
-                top: newTop + 'px'
-            });
+
+            // YUXARI
+            newTop = Math.max(
+                gap,
+                newTop
+            );
+
+
+            // AŞAĞI
+            newTop = Math.min(
+                newTop,
+                window.innerHeight - buttonHeight - gap
+            );
+
+
+            chatbotButton.style.left = newLeft + "px";
+            chatbotButton.style.top = newTop + "px";
 
             e.preventDefault();
-        });
+
+        }, { passive: false });
 
 
-        chatbotButton.on('pointerup pointercancel', function (e) {
+        document.addEventListener("pointerup", function (e) {
 
             if (!isDragging) return;
 
             isDragging = false;
 
-            $(this).css('cursor', 'grab');
+            chatbotButton.classList.remove("dragging");
 
-            try {
-                this.releasePointerCapture(e.pointerId);
-            } catch (error) {
-                // heç nə etmirik
+            if (chatbotButton.hasPointerCapture(e.pointerId)) {
+                chatbotButton.releasePointerCapture(e.pointerId);
             }
+
         });
 
 
-        // Sürüşdürməyibsə chatbot.html-ə keç
-        chatbotButton.on('click', function (e) {
+        document.addEventListener("pointercancel", function () {
+
+            isDragging = false;
+
+            chatbotButton.classList.remove("dragging");
+
+        });
+
+
+        // Sürüşdürmə yoxdursa chatbot.html-ə keç
+        chatbotButton.addEventListener("click", function (e) {
 
             if (moved) {
                 e.preventDefault();
@@ -127,6 +147,6 @@ $(document).ready(function () {
             }
 
         });
-
     }
+
 });

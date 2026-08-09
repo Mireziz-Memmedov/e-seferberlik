@@ -27,7 +27,7 @@ $(document).ready(function () {
         let startTop;
         let moved = false;
 
-        chatbotButton.on('mousedown', function (e) {
+        chatbotButton.on('pointerdown', function (e) {
 
             isDragging = true;
             moved = false;
@@ -48,11 +48,13 @@ $(document).ready(function () {
                 cursor: 'grabbing'
             });
 
+            this.setPointerCapture(e.pointerId);
+
             e.preventDefault();
         });
 
 
-        $(document).on('mousemove', function (e) {
+        chatbotButton.on('pointermove', function (e) {
 
             if (!isDragging) return;
 
@@ -71,22 +73,22 @@ $(document).ready(function () {
             let newLeft = startLeft + x;
             let newTop = startTop + y;
 
-            // Sol
+            // Sol sərhəd
             if (newLeft < gap) {
                 newLeft = gap;
             }
 
-            // Sağ
+            // Sağ sərhəd
             if (newLeft + buttonWidth > $(window).width() - gap) {
                 newLeft = $(window).width() - buttonWidth - gap;
             }
 
-            // Yuxarı
+            // Yuxarı sərhəd
             if (newTop < gap) {
                 newTop = gap;
             }
 
-            // Aşağı
+            // Aşağı sərhəd
             if (newTop + buttonHeight > $(window).height() - gap) {
                 newTop = $(window).height() - buttonHeight - gap;
             }
@@ -95,19 +97,28 @@ $(document).ready(function () {
                 left: newLeft + 'px',
                 top: newTop + 'px'
             });
+
+            e.preventDefault();
         });
 
-        $(document).on('mouseup', function () {
+
+        chatbotButton.on('pointerup pointercancel', function (e) {
 
             if (!isDragging) return;
 
             isDragging = false;
 
-            chatbotButton.css('cursor', 'grab');
+            $(this).css('cursor', 'grab');
+
+            try {
+                this.releasePointerCapture(e.pointerId);
+            } catch (error) {
+                // heç nə etmirik
+            }
         });
 
 
-        // Sürüşdürməyibsə chatbot səhifəsinə keç
+        // Sürüşdürməyibsə chatbot.html-ə keç
         chatbotButton.on('click', function (e) {
 
             if (moved) {

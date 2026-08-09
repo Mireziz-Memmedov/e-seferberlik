@@ -451,7 +451,7 @@ section {
   margin: 20px 0 0;
   padding: 15px;
   display: flex;
-  justify-content: space-around;
+  justify-content: flex-start;
   align-items: center;
   background-color: #7c7d67;
 }
@@ -468,13 +468,13 @@ section {
 }
 #guest-header .menu .box .icon i {
   color: #ffffff;
-  font-size: 30px;
+  font-size: 18px;
   cursor: pointer;
 }
 #guest-header .menu nav a {
   color: #ffffff;
   margin-left: 30px;
-  font-size: 16px;
+  font-size: 12px;
 }
 #guest-header .menu nav a:hover {
   color: #c0a916;
@@ -485,6 +485,7 @@ section {
   display: none;
   background-color: #7c7d67;
   border-radius: 10%;
+  margin-left: 20px;
 }
 #guest-header .menu .minimenu h5 {
   color: #ffffff;
@@ -497,7 +498,7 @@ section {
   display: none;
   position: absolute;
   background-color: #7c7d67;
-  min-width: 60px;
+  min-width: 110px;
   box-shadow: 0 2px 6px #7c7c7c;
   top: 100%;
   left: 0;
@@ -509,8 +510,9 @@ section {
   flex-direction: column;
 }
 #guest-header .menu .minimenu .dropdown .option a {
-  color: #000000;
+  color: #ffffff;
   margin: 5px;
+  font-size: 8px;
 }
 #guest-header .menu .minimenu .dropdown .option a:hover {
   cursor: pointer;
@@ -541,8 +543,8 @@ section {
   }
   #guest-page #guest-header .menu .minimenu {
     display: block;
-    width: 40px;
-    height: 25px;
+    width: 45px;
+    height: 30px;
     border: 2px solid #767373;
     border-radius: 6px;
   }

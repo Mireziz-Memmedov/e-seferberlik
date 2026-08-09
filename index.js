@@ -51,7 +51,7 @@ $(document).ready(function () {
 
             chatbotButton.classList.add("dragging");
 
-            // Ən vacib hissə
+            
             chatbotButton.setPointerCapture(e.pointerId);
 
             e.preventDefault();

@@ -835,7 +835,7 @@ section {
 
 #chatbot-section {
   flex: 1;
-  padding: 20px 0;
+  padding: 15px 0;
 }
 #chatbot-section .container {
   max-width: 1000px;

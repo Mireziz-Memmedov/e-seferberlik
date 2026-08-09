@@ -783,6 +783,9 @@ section {
   align-items: center;
   justify-content: space-between;
 }
+#chatbot-header .logo * {
+  cursor: pointer;
+}
 #chatbot-header .logo {
   display: flex;
   align-items: center;
@@ -987,12 +990,16 @@ section {
   font-family: "Inter", sans-serif;
   font-size: 14px;
   line-height: 20px;
+  cursor: text;
 }
 .chat-input textarea::-moz-placeholder {
   color: #9a9a9a;
 }
 .chat-input textarea::placeholder {
   color: #9a9a9a;
+}
+.chat-input button * {
+  cursor: pointer;
 }
 .chat-input button {
   width: 40px;
@@ -1005,7 +1012,6 @@ section {
   border-radius: 10px;
   background: #007bff;
   color: #ffffff;
-  cursor: pointer;
   transition: 0.2s ease;
 }
 .chat-input button:hover {

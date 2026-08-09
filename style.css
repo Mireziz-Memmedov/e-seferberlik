@@ -255,6 +255,10 @@ section {
   font-size: 13px;
 }
 
+.chatbot-button * {
+  cursor: pointer;
+}
+
 .chatbot-button {
   cursor: grab;
   touch-action: none;

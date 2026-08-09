@@ -1,0 +1,90 @@
+#mygov-page
+    min-height: 100dvh
+    display: flex
+    flex-direction: column
+    background: #f5f5f2
+    font-family: 'Inter', sans-serif
+    color: #212529
+
+#mygov-header
+    padding: 20px 0
+    width: 100%
+    background: rgba(255, 255, 255, 0.8)
+    backdrop-filter: blur(12px)
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08)
+
+    .brand *
+        cursor: pointer
+
+    .brand
+        display: flex
+        align-items: center
+        text-decoration: none
+
+        .brand-logo
+            img
+                width: 65px
+                display: block
+
+        .brand-text
+            margin-left: 12px
+
+            h1
+                margin: 0
+                color: #7c7d67
+                font-size: 25px
+                font-weight: 700
+
+            p
+                margin: 2px 0 0
+                color: #7c7d67
+                font-size: 14px
+
+    .language
+        display: flex
+        align-items: center
+        gap: 5px
+
+        span
+            padding: 5px 8px
+            color: #777
+            font-size: 14px
+            cursor: pointer
+            border-radius: 5px
+            transition: 0.3s
+
+            &:hover
+                color: #c0a916
+
+            &.active
+                color: #7c7d67
+                font-weight: 700
+                background: rgba(124, 125, 103, 0.1)
+
+@media (max-width: 576px)
+
+    #mygov-page
+
+        #mygov-header
+
+            .brand
+
+                .brand-logo
+
+                    img
+                        width: 50px
+
+                .brand-text
+                    margin-left: 8px
+
+                    h1
+                        font-size: 20px
+
+                    p
+                        font-size: 12px
+
+            .language
+
+                span
+                    padding: 0
+                    font-size: 9px

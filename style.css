@@ -930,6 +930,8 @@ section {
 .message .message-content {
   padding: 12px 15px;
   border-radius: 14px;
+  overflow-wrap: break-word;
+  word-break: break-word;
 }
 .message .message-content p {
   margin: 0;
@@ -952,6 +954,8 @@ section {
 .user-message .message-content {
   background: #007bff;
   color: #ffffff;
+  max-width: 700px;
+  margin-left: 50px;
   border-top-right-radius: 4px;
 }
 

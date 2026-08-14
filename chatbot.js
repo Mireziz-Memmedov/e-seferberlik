@@ -81,7 +81,7 @@ $(document).ready(function () {
         // Django backend-ə göndər
         $.ajax({
 
-            url: 'https://opulent-train-69jqpqg5vwvfrvp9-8000.app.github.dev/api/chatbot/',
+            url: 'https://e-seferberlik-be.onrender.com/api/chatbot/',
             type: 'POST',
 
             contentType: 'application/json',

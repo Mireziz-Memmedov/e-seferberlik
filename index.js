@@ -2,7 +2,8 @@ $(document).ready(function () {
 
     $('#mygov-login').click(function (e) {
         e.preventDefault();
-        window.location.href = "https://mygovid.gov.az/auth";
+        window.location.href = "./profile.html";
+        // window.location.href = "https://mygovid.gov.az/auth";
     });
 
     $('#guest-login').click(function (e) {

@@ -64,7 +64,7 @@ $(document).ready(function () {
 
     $("#logout-button").on("click", function () {
         // müvəqqəti olaraq
-        window.history.back();
+        window.location.href = "./index.html";
         /*
             Backend və myGov inteqrasiyası hazır deyil.
             Daha sonra burada:

@@ -482,6 +482,10 @@
         .profile-dashboard
             flex-direction: column
 
+            .profile-main
+                width: 100%
+                min-width: 0
+
     .profile-sidebar
         width: 100%
         min-width: 0
@@ -504,6 +508,10 @@
 
         .profile-dashboard
             gap: 15px
+
+            .profile-main
+                width: 100%
+                min-width: 0
 
     .profile-sidebar
         padding: 15px
@@ -552,3 +560,131 @@
 
     .info-grid
         grid-template-columns: 1fr
+
+#profile-footer
+    position: fixed
+    left: 0
+    right: 0
+    bottom: 0
+    z-index: 1000
+
+    width: 100%
+    padding: 8px 20px
+
+    background: rgba(255, 255, 255, 0.92)
+    backdrop-filter: blur(15px)
+
+    border-top: 1px solid rgba(0, 0, 0, 0.07)
+
+    box-shadow: 0 -5px 20px rgba(0, 0, 0, 0.04)
+
+    .profile-footer-nav
+        max-width: 650px
+        margin: 0 auto
+
+        display: flex
+        align-items: center
+        justify-content: space-between
+        gap: 8px
+
+    .footer-nav-item
+        position: relative
+
+        min-width: 75px
+        padding: 7px 12px
+
+        display: flex
+        flex-direction: column
+        align-items: center
+        justify-content: center
+        gap: 4px
+
+        border: none
+        background: transparent
+
+        color: #888
+        border-radius: 10px
+
+        font-family: 'Inter', sans-serif
+        font-size: 10px
+
+        cursor: pointer
+
+        transition: 0.25s
+
+        i
+            font-size: 17px
+            transition: 0.25s
+
+        span
+            line-height: 1
+
+        &:hover
+            color: #7c7d67
+            background: rgba(124, 125, 103, 0.07)
+
+        &.active
+            color: #7c7d67
+            background: rgba(124, 125, 103, 0.1)
+
+            i
+                transform: translateY(-1px)
+
+    .footer-notification-icon
+        position: relative
+
+        display: flex
+        align-items: center
+        justify-content: center
+
+        small
+            position: absolute
+            top: -7px
+            right: -10px
+
+            min-width: 15px
+            height: 15px
+
+            display: flex
+            align-items: center
+            justify-content: center
+
+            padding: 0 3px
+
+            background: #7c7d67
+            color: #ffffff
+
+            border-radius: 50%
+
+            font-size: 8px
+            font-weight: 600
+
+// Footer məzmunun üstünə düşməsin
+
+#profile-page
+    padding-bottom: 75px
+
+@media (max-width: 576px)
+
+    #profile-footer
+        padding: 7px 8px
+
+        .profile-footer-nav
+            gap: 2px
+
+        .footer-nav-item
+            min-width: 58px
+            padding: 6px 7px
+
+            font-size: 9px
+
+            i
+                font-size: 15px
+
+        .footer-notification-icon
+
+            small
+                min-width: 14px
+                height: 14px
+
+                font-size: 7px

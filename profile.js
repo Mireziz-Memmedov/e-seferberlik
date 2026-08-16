@@ -90,6 +90,17 @@ $(document).ready(function () {
     });
 
     // ==========================================
+    // FOOTER
+    // ==========================================
+
+    $(".footer-nav-item").on("click", function () {
+        const section = $(this).data("section");
+        $(".footer-nav-item").removeClass("active");
+        $(this).addClass("active");
+        openSection(section);
+    });
+
+    // ==========================================
     // API-DƏN PROFİL MƏLUMATLARINI AL MYGOV-a Inteqrsiya olandan sonra
     // ==========================================
 

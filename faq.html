@@ -8,6 +8,7 @@
     <meta name="description" content="E-Səfərbərlik — Tez-tez verilən suallar">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" defer></script>
     <script src="faq.js" defer></script>
+    <script src="dark-mode.js" defer></script>
     <script src="https://kit.fontawesome.com/51d2f8b0de.js" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -31,9 +32,17 @@
                             </div>
                         </a> </div>
                     <div class="col-auto">
-                        <nav class="language" aria-label="Dil seçimi"> <span class="active">AZ</span> <span>EN</span>
-                            <span>RU</span>
-                        </nav>
+                        <div class="header-actions d-flex">
+                            <button id="dark-mode-button" class="dark-mode-button" type="button">
+                                <i class="fa-solid fa-moon"></i>
+                            </button>
+
+                            <nav class="language" aria-label="Dil seçimi">
+                                <span class="active">AZ</span>
+                                <span>EN</span>
+                                <span>RU</span>
+                            </nav>
+                        </div>
                     </div>
                 </div>
             </div>

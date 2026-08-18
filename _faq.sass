@@ -44,6 +44,29 @@
                 color: #7c7d67
                 font-size: 14px
 
+    .dark-mode-button *
+        cursor: pointer
+
+    .dark-mode-button
+        padding: 5px 8px
+        display: flex
+        align-items: center
+        justify-content: center
+        border: 1px solid rgba(0, 0, 0, 0.08)
+        background: #ffffff
+        color: #666
+        border-radius: 5px
+        transition: 0.3s
+        margin-right: 15px
+
+        i
+            font-size: 16px
+            color: #7c7d67
+
+        &:hover
+            color: #7c7d67
+            background: rgba(124, 125, 103, 0.08)
+
     .language
         display: flex
         align-items: center
@@ -151,3 +174,71 @@
 
                     p
                         font-size: 12px
+
+// ==========================================
+// DARK MODE
+// ==========================================
+
+body#faq-page.dark-mode
+    background: #20211f
+    color: #f1f1ed
+
+    #faq-header
+        background: rgba(28, 29, 27, 0.92)
+        border-bottom-color: rgba(255, 255, 255, 0.08)
+
+        .brand
+            .brand-text
+                h1
+                    color: #d6d6c8
+
+                p
+                    color: #aaaA9c
+
+        .dark-mode-button
+            background: #252623
+            border-color: rgba(255, 255, 255, 0.08)
+            color: #aaa
+
+            i
+                color: #d6d6c8
+
+            &:hover
+                background: rgba(255, 255, 255, 0.07)
+                color: #d6d6c8
+
+        .language
+            span
+                color: #aaa
+
+                &:hover
+                    color: #c0a916
+
+                &.active
+                    color: #d6d6c8
+                    background: rgba(255, 255, 255, 0.08)
+
+    #faq
+        .faq-item
+
+            .faq-question
+                background: #30312d
+                color: #e5e5dc
+                border-color: rgba(255, 255, 255, 0.08)
+
+                &:hover
+                    background: #3a3b36
+                    border-color: rgba(214, 214, 200, 0.3)
+                    color: #f1f1ed
+                    box-shadow: 0 7px 20px rgba(0, 0, 0, 0.25)
+
+            .faq-answer
+                background: #252623
+                color: #d6d6c8
+                border: 1px solid rgba(255, 255, 255, 0.07)
+
+                p
+                    color: #d6d6c8
+
+                a
+                    color: #aeb4ff

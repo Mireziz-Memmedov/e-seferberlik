@@ -44,26 +44,52 @@
                 color: #7c7d67
                 font-size: 14px
 
-    .language
+    .header-actions
         display: flex
-        align-items: center
-        gap: 5px
 
-        span
-            padding: 5px 8px
-            color: #777
-            font-size: 14px
+        .dark-mode-button *
             cursor: pointer
+
+        .dark-mode-button
+            padding: 5px 8px
+            display: flex
+            align-items: center
+            justify-content: center
+            border: 1px solid rgba(0, 0, 0, 0.08)
+            background: #ffffff
+            color: #666
             border-radius: 5px
             transition: 0.3s
+            margin-right: 15px
+
+            i
+                font-size: 16px
+                color: #7c7d67
 
             &:hover
-                color: #c0a916
-
-            &.active
                 color: #7c7d67
-                font-weight: 700
-                background: rgba(124, 125, 103, 0.1)
+                background: rgba(124, 125, 103, 0.08)
+
+        .language
+            display: flex
+            align-items: center
+            gap: 5px
+
+            span
+                padding: 5px 8px
+                color: #777
+                font-size: 14px
+                cursor: pointer
+                border-radius: 5px
+                transition: 0.3s
+
+                &:hover
+                    color: #c0a916
+
+                &.active
+                    color: #7c7d67
+                    font-weight: 700
+                    background: rgba(124, 125, 103, 0.1)
 
 @media (max-width: 576px)
     #profile-page
@@ -87,9 +113,9 @@
                     padding: 0
                     font-size: 9px
 
-// ==========================================
-// PROFILE DASHBOARD
-// ==========================================
+// ========================================== 
+// PROFILE DASHBOARD 
+// ========================================== 
 
 #profile
     width: 100%
@@ -100,9 +126,9 @@
         gap: 25px
         align-items: flex-start
 
-// ==========================================
-// SIDEBAR
-// ==========================================
+// ========================================== 
+// SIDEBAR 
+// ========================================== 
 
 .profile-sidebar
     width: 250px
@@ -116,9 +142,9 @@
     flex-direction: column
     min-height: 550px
 
-// ==========================================
-// USER BOX
-// ==========================================
+// ========================================== 
+// USER BOX 
+// ========================================== 
 
 .user-box
     display: flex
@@ -153,9 +179,9 @@
             font-size: 12px
             color: #777
 
-// ==========================================
-// PROFILE MENU
-// ==========================================
+// ========================================== 
+// PROFILE MENU 
+// ========================================== 
 
 .profile-menu
     display: flex
@@ -192,9 +218,9 @@
         color: #7c7d67
         font-weight: 600
 
-// ==========================================
-// LOGOUT
-// ==========================================
+// ========================================== 
+// LOGOUT 
+// ========================================== 
 
 .logout-button *
     cursor: pointer
@@ -217,17 +243,17 @@
         background: rgba(220, 53, 69, 0.08)
         color: #dc3545
 
-// ==========================================
-// MAIN
-// ==========================================
+// ========================================== 
+// MAIN 
+// ========================================== 
 
 .profile-main
     flex: 1
     min-width: 0
 
-// ==========================================
-// TOPBAR
-// ==========================================
+// ========================================== 
+// TOPBAR 
+// ========================================== 
 
 .profile-topbar
     display: flex
@@ -247,9 +273,9 @@
         color: #777
         font-size: 14px
 
-// ==========================================
-// NOTIFICATION BUTTON
-// ==========================================
+// ========================================== 
+// NOTIFICATION BUTTON 
+// ========================================== 
 
 .notification-button
     cursor: pointer
@@ -290,9 +316,9 @@
         font-size: 10px
         font-weight: 600
 
-// ==========================================
-// PROFILE SECTIONS
-// ==========================================
+// ========================================== 
+// PROFILE SECTIONS 
+// ========================================== 
 
 .profile-section
     display: none
@@ -300,9 +326,9 @@
     &.active
         display: block
 
-// ==========================================
-// WELCOME CARD
-// ==========================================
+// ========================================== 
+// WELCOME CARD 
+// ========================================== 
 
 .welcome-card
     display: flex
@@ -346,9 +372,9 @@
         border-radius: 18px
         font-size: 30px
 
-// ==========================================
-// DASHBOARD CARDS
-// ==========================================
+// ========================================== 
+// DASHBOARD CARDS 
+// ========================================== 
 
 .dashboard-cards
     display: grid
@@ -402,9 +428,9 @@
         font-weight: 600
         cursor: pointer
 
-// ==========================================
-// SECTION CARD
-// ==========================================
+// ========================================== 
+// SECTION CARD 
+// ========================================== 
 
 .section-card
     padding: 30px
@@ -419,9 +445,9 @@
         font-size: 20px
         font-weight: 700
 
-// ==========================================
-// INFO GRID
-// ==========================================
+// ========================================== 
+// INFO GRID 
+// ========================================== 
 
 .info-grid
     display: grid
@@ -445,9 +471,9 @@
         font-size: 14px
         font-weight: 600
 
-// ==========================================
-// EMPTY STATE
-// ==========================================
+// ========================================== 
+// EMPTY STATE 
+// ========================================== 
 
 .empty-state
     padding: 60px 20px
@@ -469,9 +495,9 @@
         margin: 0
         font-size: 13px
 
-// ==========================================
-// RESPONSIVE
-// ==========================================
+// ========================================== 
+// RESPONSIVE 
+// ========================================== 
 
 @media (max-width: 992px)
     #profile
@@ -573,7 +599,6 @@
     .profile-footer-nav
         max-width: 650px
         margin: 0 auto
-
         display: flex
         align-items: center
         justify-content: space-between
@@ -637,7 +662,7 @@
             font-size: 8px
             font-weight: 600
 
-// Footer məzmunun üstünə düşməsin
+// Footer məzmunun üstünə düşməsin 
 
 #profile-page
     padding-bottom: 75px
@@ -662,3 +687,207 @@
                 min-width: 14px
                 height: 14px
                 font-size: 7px
+
+// ========================================== 
+// DARK MODE 
+// ========================================== 
+
+body#profile-page.dark-mode
+    background: #20211f
+    color: #f1f1ed
+
+    #profile-header
+        background: rgba(28, 29, 27, 0.92)
+        border-bottom: 1px solid rgba(255, 255, 255, 0.08)
+
+        .brand
+            .brand-text
+                h1
+                    color: #d6d6c8
+
+                p
+                    color: #aaaa9c
+
+        .dark-mode-button
+            background: #252623
+            border-color: rgba(255, 255, 255, 0.08)
+
+            i
+                color: #d6d6c8
+
+            &:hover
+                background: rgba(255, 255, 255, 0.07)
+
+        .language
+            span
+                color: #aaa
+
+                &:hover
+                    color: #c0a916
+
+                &.active
+                    color: #d6d6c8
+                    background: rgba(255, 255, 255, 0.08)
+
+    #profile-footer
+        background: rgba(28, 29, 27, 0.95)
+        border-top: 1px solid rgba(255, 255, 255, 0.08)
+
+    // SIDEBAR 
+
+    .profile-sidebar
+        background: #252623
+        border-color: rgba(255, 255, 255, 0.07)
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25)
+
+    .user-box
+        border-bottom-color: rgba(255, 255, 255, 0.08)
+
+        .user-avatar
+            background: rgba(124, 125, 103, 0.18)
+            color: #c5c5b5
+
+        .user-info
+            strong
+                color: #f1f1ed
+
+            span
+                color: #999
+
+    // PROFILE MENU 
+
+    .profile-menu-item
+        color: #aaa
+
+        &:hover
+            background: rgba(255, 255, 255, 0.06)
+            color: #d0d0c2
+
+        &.active
+            background: rgba(124, 125, 103, 0.2)
+            color: #d0d0c2
+
+    // LOGOUT 
+
+    .logout-button
+        color: #aaa
+
+        &:hover
+            background: rgba(220, 53, 69, 0.12)
+            color: #ff6b78
+
+    // TOPBAR 
+
+    .profile-topbar
+        h2
+            color: #f1f1ed
+
+        p
+            color: #999
+
+    // NOTIFICATION 
+
+    .notification-button
+        background: #252623
+        border-color: rgba(255, 255, 255, 0.08)
+        color: #aaa
+
+        &:hover
+            background: rgba(255, 255, 255, 0.07)
+            color: #d0d0c2
+
+    // WELCOME CARD 
+
+    .welcome-card
+        background: #252623
+        border-color: rgba(255, 255, 255, 0.07)
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2)
+
+        span
+            color: #c5c5b5
+
+        h3
+            color: #f1f1ed
+
+        p
+            color: #999
+
+        .welcome-icon
+            background: rgba(124, 125, 103, 0.18)
+            color: #c5c5b5
+
+    // DASHBOARD CARDS 
+
+    .dashboard-card
+        background: #252623
+        border-color: rgba(255, 255, 255, 0.07)
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2)
+
+        &:hover
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3)
+
+        .card-icon
+            background: rgba(124, 125, 103, 0.18)
+            color: #c5c5b5
+
+        h4
+            color: #f1f1ed
+
+        p
+            color: #999
+
+        .card-button
+            color: #c5c5b5
+
+    // SECTION CARD 
+
+    .section-card
+        background: #252623
+        border-color: rgba(255, 255, 255, 0.07)
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2)
+
+        h3
+            color: #f1f1ed
+
+    // INFO 
+
+    .info-item
+        background: #2d2e2b
+
+        span
+            color: #999
+
+        strong
+            color: #f1f1ed
+
+    // EMPTY STATE 
+
+    .empty-state
+        color: #999
+
+        i
+            color: #777
+
+        h4
+            color: #ccc
+
+        p
+            color: #999
+
+    // FOOTER 
+
+    #profile-footer
+        background: rgba(28, 29, 27, 0.92)
+        border-top-color: rgba(255, 255, 255, 0.08)
+        box-shadow: 0 -5px 20px rgba(0, 0, 0, 0.25)
+
+        .footer-nav-item
+            color: #888
+
+            &:hover
+                color: #d0d0c2
+                background: rgba(255, 255, 255, 0.06)
+
+            &.active
+                color: #d0d0c2
+                background: rgba(124, 125, 103, 0.2)

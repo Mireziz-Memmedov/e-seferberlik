@@ -397,12 +397,38 @@ section {
   color: #7c7d67;
   font-size: 14px;
 }
-#profile-header .language {
+#profile-header .header-actions {
+  display: flex;
+}
+#profile-header .header-actions .dark-mode-button * {
+  cursor: pointer;
+}
+#profile-header .header-actions .dark-mode-button {
+  padding: 5px 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  background: #ffffff;
+  color: #666;
+  border-radius: 5px;
+  transition: 0.3s;
+  margin-right: 15px;
+}
+#profile-header .header-actions .dark-mode-button i {
+  font-size: 16px;
+  color: #7c7d67;
+}
+#profile-header .header-actions .dark-mode-button:hover {
+  color: #7c7d67;
+  background: rgba(124, 125, 103, 0.08);
+}
+#profile-header .header-actions .language {
   display: flex;
   align-items: center;
   gap: 5px;
 }
-#profile-header .language span {
+#profile-header .header-actions .language span {
   padding: 5px 8px;
   color: #777;
   font-size: 14px;
@@ -410,10 +436,10 @@ section {
   border-radius: 5px;
   transition: 0.3s;
 }
-#profile-header .language span:hover {
+#profile-header .header-actions .language span:hover {
   color: #c0a916;
 }
-#profile-header .language span.active {
+#profile-header .header-actions .language span.active {
   color: #7c7d67;
   font-weight: 700;
   background: rgba(124, 125, 103, 0.1);
@@ -971,6 +997,180 @@ section {
     font-size: 7px;
   }
 }
+body#profile-page.dark-mode {
+  background: #20211f;
+  color: #f1f1ed;
+}
+body#profile-page.dark-mode #profile-header {
+  background: rgba(28, 29, 27, 0.92);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+body#profile-page.dark-mode #profile-header .brand .brand-text h1 {
+  color: #d6d6c8;
+}
+body#profile-page.dark-mode #profile-header .brand .brand-text p {
+  color: #aaaa9c;
+}
+body#profile-page.dark-mode #profile-header .dark-mode-button {
+  background: #252623;
+  border-color: rgba(255, 255, 255, 0.08);
+}
+body#profile-page.dark-mode #profile-header .dark-mode-button i {
+  color: #d6d6c8;
+}
+body#profile-page.dark-mode #profile-header .dark-mode-button:hover {
+  background: rgba(255, 255, 255, 0.07);
+}
+body#profile-page.dark-mode #profile-header .language span {
+  color: #aaa;
+}
+body#profile-page.dark-mode #profile-header .language span:hover {
+  color: #c0a916;
+}
+body#profile-page.dark-mode #profile-header .language span.active {
+  color: #d6d6c8;
+  background: rgba(255, 255, 255, 0.08);
+}
+body#profile-page.dark-mode #profile-footer {
+  background: rgba(28, 29, 27, 0.95);
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+body#profile-page.dark-mode .profile-sidebar {
+  background: #252623;
+  border-color: rgba(255, 255, 255, 0.07);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
+}
+body#profile-page.dark-mode .user-box {
+  border-bottom-color: rgba(255, 255, 255, 0.08);
+}
+body#profile-page.dark-mode .user-box .user-avatar {
+  background: rgba(124, 125, 103, 0.18);
+  color: #c5c5b5;
+}
+body#profile-page.dark-mode .user-box .user-info strong {
+  color: #f1f1ed;
+}
+body#profile-page.dark-mode .user-box .user-info span {
+  color: #999;
+}
+body#profile-page.dark-mode .profile-menu-item {
+  color: #aaa;
+}
+body#profile-page.dark-mode .profile-menu-item:hover {
+  background: rgba(255, 255, 255, 0.06);
+  color: #d0d0c2;
+}
+body#profile-page.dark-mode .profile-menu-item.active {
+  background: rgba(124, 125, 103, 0.2);
+  color: #d0d0c2;
+}
+body#profile-page.dark-mode .logout-button {
+  color: #aaa;
+}
+body#profile-page.dark-mode .logout-button:hover {
+  background: rgba(220, 53, 69, 0.12);
+  color: #ff6b78;
+}
+body#profile-page.dark-mode .profile-topbar h2 {
+  color: #f1f1ed;
+}
+body#profile-page.dark-mode .profile-topbar p {
+  color: #999;
+}
+body#profile-page.dark-mode .notification-button {
+  background: #252623;
+  border-color: rgba(255, 255, 255, 0.08);
+  color: #aaa;
+}
+body#profile-page.dark-mode .notification-button:hover {
+  background: rgba(255, 255, 255, 0.07);
+  color: #d0d0c2;
+}
+body#profile-page.dark-mode .welcome-card {
+  background: #252623;
+  border-color: rgba(255, 255, 255, 0.07);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+body#profile-page.dark-mode .welcome-card span {
+  color: #c5c5b5;
+}
+body#profile-page.dark-mode .welcome-card h3 {
+  color: #f1f1ed;
+}
+body#profile-page.dark-mode .welcome-card p {
+  color: #999;
+}
+body#profile-page.dark-mode .welcome-card .welcome-icon {
+  background: rgba(124, 125, 103, 0.18);
+  color: #c5c5b5;
+}
+body#profile-page.dark-mode .dashboard-card {
+  background: #252623;
+  border-color: rgba(255, 255, 255, 0.07);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+body#profile-page.dark-mode .dashboard-card:hover {
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
+}
+body#profile-page.dark-mode .dashboard-card .card-icon {
+  background: rgba(124, 125, 103, 0.18);
+  color: #c5c5b5;
+}
+body#profile-page.dark-mode .dashboard-card h4 {
+  color: #f1f1ed;
+}
+body#profile-page.dark-mode .dashboard-card p {
+  color: #999;
+}
+body#profile-page.dark-mode .dashboard-card .card-button {
+  color: #c5c5b5;
+}
+body#profile-page.dark-mode .section-card {
+  background: #252623;
+  border-color: rgba(255, 255, 255, 0.07);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+body#profile-page.dark-mode .section-card h3 {
+  color: #f1f1ed;
+}
+body#profile-page.dark-mode .info-item {
+  background: #2d2e2b;
+}
+body#profile-page.dark-mode .info-item span {
+  color: #999;
+}
+body#profile-page.dark-mode .info-item strong {
+  color: #f1f1ed;
+}
+body#profile-page.dark-mode .empty-state {
+  color: #999;
+}
+body#profile-page.dark-mode .empty-state i {
+  color: #777;
+}
+body#profile-page.dark-mode .empty-state h4 {
+  color: #ccc;
+}
+body#profile-page.dark-mode .empty-state p {
+  color: #999;
+}
+body#profile-page.dark-mode #profile-footer {
+  background: rgba(28, 29, 27, 0.92);
+  border-top-color: rgba(255, 255, 255, 0.08);
+  box-shadow: 0 -5px 20px rgba(0, 0, 0, 0.25);
+}
+body#profile-page.dark-mode #profile-footer .footer-nav-item {
+  color: #888;
+}
+body#profile-page.dark-mode #profile-footer .footer-nav-item:hover {
+  color: #d0d0c2;
+  background: rgba(255, 255, 255, 0.06);
+}
+body#profile-page.dark-mode #profile-footer .footer-nav-item.active {
+  color: #d0d0c2;
+  background: rgba(124, 125, 103, 0.2);
+}
+
 #guest-page {
   min-height: 100dvh;
   display: flex;

@@ -29,6 +29,10 @@ $(document).ready(function () {
         $(".profile-menu-item").removeClass("active");
         $('.profile-menu-item[data-section="' + section + '"]')
             .addClass("active");
+
+        $(".footer-nav-item").removeClass("active");
+        $('.footer-nav-item[data-section="' + section + '"]')
+            .addClass("active");
         $(".profile-section").removeClass("active");
         $("#" + section).addClass("active");
 

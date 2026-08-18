@@ -14,7 +14,6 @@ $(document).ready(function () {
             .addClass("fa-sun");
     }
 
-
     // Dark mode düyməsi
     $("#dark-mode-button").on("click", function () {
 

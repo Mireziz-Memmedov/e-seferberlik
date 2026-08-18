@@ -55,6 +55,29 @@
                 font-size: 13px
                 color: #6c757d
 
+    .dark-mode-button *
+        cursor: pointer
+
+    .dark-mode-button
+        padding: 5px 8px
+        display: flex
+        align-items: center
+        justify-content: center
+        border: 1px solid rgba(0, 0, 0, 0.08)
+        background: #ffffff
+        color: #666
+        border-radius: 5px
+        transition: 0.3s
+        margin-right: 15px
+
+        i
+            font-size: 16px
+            color: #7c7d67
+
+        &:hover
+            color: #7c7d67
+            background: rgba(124, 125, 103, 0.08)
+
     .back-button *
         cursor: pointer
     .back-button
@@ -376,3 +399,122 @@
 
     .chat-notice
         font-size: 10px
+
+// ==========================================
+// DARK MODE
+// ==========================================
+
+body.dark-mode #chatbot-page
+    background: #20211f
+    color: #f1f1ed
+
+    // HEADER
+
+    #chatbot-header
+        background: #252623
+        border-bottom-color: rgba(255, 255, 255, 0.08)
+
+        .dark-mode-button
+            background: #30312d
+            border-color: rgba(255, 255, 255, 0.1)
+            color: #f1f1ed
+            
+            i
+                color: #d6d6c8
+
+            &:hover
+                background: #3a3b36
+                color: #ffffff
+
+        .logo
+            color: #f1f1ed
+
+            .text
+                h2
+                    color: #f1f1ed
+
+                span
+                    color: #999
+
+        .back-button
+            color: #aaa
+
+            &:hover
+                color: #d6d6c8
+
+    // CHATBOT SECTION
+
+    #chatbot-section
+        background: #20211f
+
+    // CHATBOT WRAPPER
+
+    .chatbot-wrapper
+        background: #252623
+        border-color: rgba(255, 255, 255, 0.07)
+        box-shadow: 0 8px 30px rgba(0, 0, 0, 0.25)
+
+    // CHAT HEADER
+
+    .chat-header
+        background: #252623
+        border-bottom-color: rgba(255, 255, 255, 0.08)
+
+        .chat-text
+            h1
+                color: #f1f1ed
+
+            span
+                color: #999
+
+    // MESSAGES
+
+    .chat-messages
+        background: #252623
+
+    // BOT MESSAGE
+
+    .bot-message
+        .message-content
+            background: #30312d
+            color: #e5e5dc
+
+    // USER MESSAGE
+
+    .user-message
+        .message-content
+            background: #3d3f38
+            color: #f1f1ed
+
+    // INPUT
+
+    .chat-input-wrapper
+        background: #252623
+        border-top-color: rgba(255, 255, 255, 0.08)
+
+    .chat-input
+        background: #2d2e2b
+        border-color: rgba(255, 255, 255, 0.1)
+
+        &:focus-within
+            border-color: #7c7d67
+            box-shadow: 0 0 0 3px rgba(124, 125, 103, 0.12)
+
+        textarea
+            color: #f1f1ed
+            background: transparent
+
+            &::placeholder
+                color: #888
+
+        button
+            background: #7c7d67
+            color: #ffffff
+
+            &:hover
+                background: #8a8b75
+
+    // NOTICE
+
+    .chat-notice
+        color: #777

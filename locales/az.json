@@ -1,0 +1,142 @@
+{
+    "login": {
+        "title": "Daxil ol | E-Səfərbərlik",
+        "description": "E-Səfərbərlik — səfərbərliklə bağlı məlumat və elektron xidmətlər portalı",
+        "brand": {
+            "name": "E-Səfərbərlik",
+            "subtitle": "Elektron xidmət portalı"
+        },
+        "language": {
+            "label": "Dil seçimi",
+            "az": "AZ",
+            "en": "EN",
+            "ru": "RU"
+        },
+        "card": {
+            "title": "Hesabınıza daxil olun",
+            "description": "Davam etmək üçün MyGov vasitəsilə daxil olun."
+        },
+        "mygov": {
+            "button": "MyGov ilə daxil ol",
+            "security": "Təhlükəsiz giriş"
+        },
+        "guest": {
+            "button": "Qeydiyyatsız davam et"
+        },
+        "faq": {
+            "button": "Tez-tez verilən suallar"
+        },
+        "security": {
+            "text": "Giriş məlumatlarınız təhlükəsiz şəkildə qorunur."
+        },
+        "chatbot": {
+            "ariaLabel": "E-Səfərbərlik chatbot"
+        }
+    },
+    "chatbot": {
+        "description": "E-Səfərbərlik — virtual köməkçi",
+        "title": "E-Səfərbərlik | Virtual köməkçi",
+        "brand": {
+            "name": "E-Səfərbərlik",
+            "subtitle": "Virtual köməkçi"
+        },
+        "header": {
+            "title": "E-Səfərbərlik köməkçisi",
+            "status": "Suallarınızı cavablandırmağa hazıram"
+        },
+        "welcome": {
+            "hello": "Salam! 👋",
+            "text": "Mən E-Səfərbərlik virtual köməkçisiyəm. Səfərbərliklə bağlı suallarınızı cavablandırmağa çalışacağam."
+        },
+        "input": {
+            "placeholder": "Sualınızı yazın...",
+            "ariaLabel": "Sualınızı yazın",
+            "send": "Mesajı göndər"
+        },
+        "notice": "Virtual köməkçinin cavabları məlumatlandırıcı xarakter daşıyır."
+    },
+    "profile": {
+        "title": "Şəxsi kabinet | E-Səfərbərlik",
+        "brand": {
+            "name": "E-Səfərbərlik",
+            "subtitle": "Şəxsi kabinet"
+        },
+        "language": {
+            "label": "Dil seçimi",
+            "az": "AZ",
+            "en": "EN",
+            "ru": "RU"
+        },
+        "user": {
+            "name": "İstifadəçi",
+            "subtitle": "Şəxsi kabinet"
+        },
+        "menu": {
+            "overview": "Ümumi məlumat",
+            "personal": "Şəxsi məlumatlar",
+            "military": "Hərbi məlumatlar",
+            "documents": "Sənədlər",
+            "notifications": "Bildirişlər"
+        },
+        "logout": "Çıxış",
+        "topbar": {
+            "title": "Ümumi məlumat",
+            "description": "Şəxsi kabinetinizə xoş gəlmisiniz."
+        },
+        "overview": {
+            "hello": "Salam!",
+            "title": "Şəxsi kabinetiniz",
+            "description": "E-Səfərbərlik portalında şəxsi məlumatlarınızı və hərbi qeydiyyat məlumatlarınızı burada görə bilərsiniz."
+        },
+        "cards": {
+            "personal": {
+                "title": "Şəxsi məlumatlar",
+                "description": "Şəxsi məlumatlarınıza baxın."
+            },
+            "military": {
+                "title": "Hərbi məlumatlar",
+                "description": "Hərbi qeydiyyat məlumatlarınıza baxın."
+            },
+            "documents": {
+                "title": "Sənədlər",
+                "description": "Elektron sənədlərinizə baxın."
+            },
+            "details": "Ətraflı bax"
+        },
+        "noData": "Məlumat yoxdur",
+        "personal": {
+            "title": "Şəxsi məlumatlar",
+            "fullName": "Ad, soyad",
+            "birthDate": "Doğum tarixi",
+            "fin": "FİN",
+            "phone": "Telefon"
+        },
+        "military": {
+            "title": "Hərbi məlumatlar",
+            "registrationStatus": "Hərbi qeydiyyat statusu",
+            "serviceStatus": "Hərbi xidmət statusu",
+            "servicePlace": "Hərbi xidmət yeri",
+            "specialty": "Hərbi uçot ixtisası"
+        },
+        "documents": {
+            "title": "Sənədlər",
+            "emptyTitle": "Sənəd yoxdur",
+            "emptyDescription": "Elektron sənədləriniz burada göstəriləcək."
+        },
+        "notifications": {
+            "title": "Bildirişlər",
+            "emptyTitle": "Bildiriş yoxdur",
+            "emptyDescription": "Yeni bildirişləriniz burada göstəriləcək."
+        },
+        "footer": {
+            "home": "Əsas",
+            "profile": "Kabinet",
+            "military": "Hərbi",
+            "documents": "Sənədlər",
+            "notifications": "Bildiriş"
+        },
+        "chatbot": {
+            "ariaLabel": "E-Səfərbərlik chatbot"
+        }
+    }
+}

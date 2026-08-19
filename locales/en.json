@@ -1,0 +1,142 @@
+{
+    "login": {
+        "title": "Sign In | E-Mobilization",
+        "description": "E-Mobilization — mobilization information and electronic services portal",
+        "brand": {
+            "name": "E-Mobilization",
+            "subtitle": "Electronic Services Portal"
+        },
+        "language": {
+            "label": "Language selection",
+            "az": "AZ",
+            "en": "EN",
+            "ru": "RU"
+        },
+        "card": {
+            "title": "Sign in to your account",
+            "description": "Continue by signing in through MyGov."
+        },
+        "mygov": {
+            "button": "Sign in with MyGov",
+            "security": "Secure login"
+        },
+        "guest": {
+            "button": "Continue without registration"
+        },
+        "faq": {
+            "button": "Frequently Asked Questions"
+        },
+        "security": {
+            "text": "Your login information is securely protected."
+        },
+        "chatbot": {
+            "ariaLabel": "E-Mobilization chatbot"
+        }
+    },
+    "chatbot": {
+        "description": "E-Mobilization — virtual assistant",
+        "title": "E-Mobilization | Virtual Assistant",
+        "brand": {
+            "name": "E-Mobilization",
+            "subtitle": "Virtual Assistant"
+        },
+        "header": {
+            "title": "E-Mobilization Assistant",
+            "status": "Ready to answer your questions"
+        },
+        "welcome": {
+            "hello": "Hello! 👋",
+            "text": "I am the E-Mobilization virtual assistant. I will try to answer your questions about mobilization."
+        },
+        "input": {
+            "placeholder": "Type your question...",
+            "ariaLabel": "Type your question",
+            "send": "Send message"
+        },
+        "notice": "The virtual assistant's answers are for informational purposes only."
+    },
+    "profile": {
+        "title": "Personal Cabinet | E-Mobilization",
+        "brand": {
+            "name": "E-Mobilization",
+            "subtitle": "Personal Cabinet"
+        },
+        "language": {
+            "label": "Language selection",
+            "az": "AZ",
+            "en": "EN",
+            "ru": "RU"
+        },
+        "user": {
+            "name": "User",
+            "subtitle": "Personal Cabinet"
+        },
+        "menu": {
+            "overview": "Overview",
+            "personal": "Personal Information",
+            "military": "Military Information",
+            "documents": "Documents",
+            "notifications": "Notifications"
+        },
+        "logout": "Log Out",
+        "topbar": {
+            "title": "Overview",
+            "description": "Welcome to your personal cabinet."
+        },
+        "overview": {
+            "hello": "Hello!",
+            "title": "Your Personal Cabinet",
+            "description": "Here you can view your personal information and military registration details on the E-Mobilization portal."
+        },
+        "cards": {
+            "personal": {
+                "title": "Personal Information",
+                "description": "View your personal information."
+            },
+            "military": {
+                "title": "Military Information",
+                "description": "View your military registration information."
+            },
+            "documents": {
+                "title": "Documents",
+                "description": "View your electronic documents."
+            },
+            "details": "View Details"
+        },
+        "noData": "No information available",
+        "personal": {
+            "title": "Personal Information",
+            "fullName": "Full Name",
+            "birthDate": "Date of Birth",
+            "fin": "FIN",
+            "phone": "Phone"
+        },
+        "military": {
+            "title": "Military Information",
+            "registrationStatus": "Military Registration Status",
+            "serviceStatus": "Military Service Status",
+            "servicePlace": "Place of Military Service",
+            "specialty": "Military Registration Specialty"
+        },
+        "documents": {
+            "title": "Documents",
+            "emptyTitle": "No Documents",
+            "emptyDescription": "Your electronic documents will be displayed here."
+        },
+        "notifications": {
+            "title": "Notifications",
+            "emptyTitle": "No Notifications",
+            "emptyDescription": "Your new notifications will be displayed here."
+        },
+        "footer": {
+            "home": "Home",
+            "profile": "Cabinet",
+            "military": "Military",
+            "documents": "Documents",
+            "notifications": "Notifications"
+        },
+        "chatbot": {
+            "ariaLabel": "E-Mobilization chatbot"
+        }
+    }
+}

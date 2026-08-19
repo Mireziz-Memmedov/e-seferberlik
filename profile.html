@@ -8,13 +8,14 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" defer></script>
     <script src="profile.js" defer></script>
     <script src="dark-mode.js" defer></script>
+    <script src="translation.js" defer></script>
     <script src="https://kit.fontawesome.com/51d2f8b0de.js" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="style.css">
-    <title>Şəxsi kabinet | E-Səfərbərlik</title>
+    <title data-i18n="profile.title">Şəxsi kabinet | E-Səfərbərlik</title>
     <link rel="icon" href="Assets/seferberlik.png">
 </head>
 
@@ -30,8 +31,8 @@
                                 <img src="Assets/SF.png" alt="E-Səfərbərlik">
                             </div>
                             <div class="brand-text">
-                                <h1>E-Səfərbərlik</h1>
-                                <p>Şəxsi kabinet</p>
+                                <h1 data-i18n="profile.brand.name">E-Səfərbərlik</h1>
+                                <p data-i18n="profile.brand.subtitle">Şəxsi kabinet</p>
                             </div>
                         </a>
                     </div>
@@ -41,10 +42,10 @@
                                 <i class="fa-solid fa-moon"></i>
                             </button>
 
-                            <nav class="language" aria-label="Dil seçimi">
-                                <span class="active">AZ</span>
-                                <span>EN</span>
-                                <span>RU</span>
+                            <nav class="language" aria-label="Dil seçimi" data-i18n-aria-label="profile.language.label">
+                                <span class="active" data-lang="az" data-i18n="profile.language.az">AZ</span>
+                                <span data-lang="en" data-i18n="profile.language.en">EN</span>
+                                <span data-lang="ru" data-i18n="profile.language.ru">RU</span>
                             </nav>
                         </div>
                     </div>
@@ -52,6 +53,7 @@
             </div>
         </section>
     </header>
+
     <main>
         <section id="profile">
             <div class="container">
@@ -64,49 +66,57 @@
                                 <i class="fa-solid fa-user"></i>
                             </div>
                             <div class="user-info">
-                                <strong>İstifadəçi</strong>
-                                <span>Şəxsi kabinet</span>
+                                <strong data-i18n="profile.user.name">İstifadəçi</strong>
+                                <span data-i18n="profile.user.subtitle">Şəxsi kabinet</span>
                             </div>
                         </div>
+
                         <nav class="profile-menu">
                             <button class="profile-menu-item active" data-section="overview">
                                 <i class="fa-solid fa-house"></i>
-                                <span>Ümumi məlumat</span>
+                                <span data-i18n="profile.menu.overview">Ümumi məlumat</span>
                             </button>
+
                             <button class="profile-menu-item" data-section="personal">
                                 <i class="fa-solid fa-user"></i>
-                                <span>Şəxsi məlumatlar</span>
+                                <span data-i18n="profile.menu.personal">Şəxsi məlumatlar</span>
                             </button>
+
                             <button class="profile-menu-item" data-section="military">
                                 <i class="fa-solid fa-shield-halved"></i>
-                                <span>Hərbi məlumatlar</span>
+                                <span data-i18n="profile.menu.military">Hərbi məlumatlar</span>
                             </button>
+
                             <button class="profile-menu-item" data-section="documents">
                                 <i class="fa-solid fa-file-lines"></i>
-                                <span>Sənədlər</span>
+                                <span data-i18n="profile.menu.documents">Sənədlər</span>
                             </button>
+
                             <button class="profile-menu-item" data-section="notifications">
                                 <i class="fa-solid fa-bell"></i>
-                                <span>Bildirişlər</span>
+                                <span data-i18n="profile.menu.notifications">Bildirişlər</span>
                             </button>
                         </nav>
+
                         <button class="logout-button" id="logout-button">
                             <i class="fa-solid fa-right-from-bracket"></i>
-                            <span>Çıxış</span>
+                            <span data-i18n="profile.logout">Çıxış</span>
                         </button>
                     </aside>
+
                     <!-- MAIN -->
                     <div class="profile-main">
                         <!-- HEADER -->
                         <div class="profile-topbar">
                             <div>
-                                <h2 id="page-title">
+                                <h2 id="page-title" data-i18n="profile.topbar.title">
                                     Ümumi məlumat
                                 </h2>
-                                <p>
+                                <p data-i18n="profile.topbar.description">
                                     Şəxsi kabinetinizə xoş gəlmisiniz.
                                 </p>
                             </div>
+
                             <button class="notification-button" id="notification-button">
                                 <i class="fa-regular fa-bell"></i>
                                 <span class="notification-count">
@@ -114,183 +124,223 @@
                                 </span>
                             </button>
                         </div>
+
                         <!-- OVERVIEW -->
                         <div class="profile-section active" id="overview">
                             <div class="welcome-card">
                                 <div>
-                                    <span>Salam!</span>
-                                    <h3>
+                                    <span data-i18n="profile.overview.hello">Salam!</span>
+                                    <h3 data-i18n="profile.overview.title">
                                         Şəxsi kabinetiniz
                                     </h3>
-                                    <p>
+                                    <p data-i18n="profile.overview.description">
                                         E-Səfərbərlik portalında şəxsi
                                         məlumatlarınızı və hərbi qeydiyyat
                                         məlumatlarınızı burada görə bilərsiniz.
                                     </p>
                                 </div>
+
                                 <div class="welcome-icon">
                                     <i class="fa-solid fa-shield-halved"></i>
                                 </div>
                             </div>
+
                             <div class="dashboard-cards">
                                 <div class="dashboard-card" data-section="personal">
                                     <div class="card-icon">
                                         <i class="fa-solid fa-user"></i>
                                     </div>
-                                    <h4>
+
+                                    <h4 data-i18n="profile.cards.personal.title">
                                         Şəxsi məlumatlar
                                     </h4>
-                                    <p>
+
+                                    <p data-i18n="profile.cards.personal.description">
                                         Şəxsi məlumatlarınıza baxın.
                                     </p>
-                                    <button class="card-button">
+
+                                    <button class="card-button" data-i18n="profile.cards.details">
                                         Ətraflı bax
                                     </button>
                                 </div>
+
                                 <div class="dashboard-card" data-section="military">
                                     <div class="card-icon">
                                         <i class="fa-solid fa-shield-halved"></i>
                                     </div>
-                                    <h4>
+
+                                    <h4 data-i18n="profile.cards.military.title">
                                         Hərbi məlumatlar
                                     </h4>
-                                    <p>
+
+                                    <p data-i18n="profile.cards.military.description">
                                         Hərbi qeydiyyat məlumatlarınıza baxın.
                                     </p>
-                                    <button class="card-button">
+
+                                    <button class="card-button" data-i18n="profile.cards.details">
                                         Ətraflı bax
                                     </button>
                                 </div>
+
                                 <div class="dashboard-card" data-section="documents">
                                     <div class="card-icon">
                                         <i class="fa-solid fa-file-lines"></i>
                                     </div>
-                                    <h4>
+
+                                    <h4 data-i18n="profile.cards.documents.title">
                                         Sənədlər
                                     </h4>
-                                    <p>
+
+                                    <p data-i18n="profile.cards.documents.description">
                                         Elektron sənədlərinizə baxın.
                                     </p>
-                                    <button class="card-button">
+
+                                    <button class="card-button" data-i18n="profile.cards.details">
                                         Ətraflı bax
                                     </button>
                                 </div>
                             </div>
                         </div>
+
                         <!-- PERSONAL -->
                         <div class="profile-section" id="personal">
                             <div class="section-card">
-                                <h3>
+                                <h3 data-i18n="profile.personal.title">
                                     Şəxsi məlumatlar
                                 </h3>
+
                                 <div class="info-grid">
                                     <div class="info-item">
-                                        <span>
+                                        <span data-i18n="profile.personal.fullName">
                                             Ad, soyad
                                         </span>
-                                        <strong>
+
+                                        <strong data-i18n="profile.noData">
                                             Məlumat yoxdur
                                         </strong>
                                     </div>
+
                                     <div class="info-item">
-                                        <span>
+                                        <span data-i18n="profile.personal.birthDate">
                                             Doğum tarixi
                                         </span>
-                                        <strong>
+
+                                        <strong data-i18n="profile.noData">
                                             Məlumat yoxdur
                                         </strong>
                                     </div>
+
                                     <div class="info-item">
-                                        <span>
+                                        <span data-i18n="profile.personal.fin">
                                             FİN
                                         </span>
-                                        <strong>
+
+                                        <strong data-i18n="profile.noData">
                                             Məlumat yoxdur
                                         </strong>
                                     </div>
+
                                     <div class="info-item">
-                                        <span>
+                                        <span data-i18n="profile.personal.phone">
                                             Telefon
                                         </span>
-                                        <strong>
+
+                                        <strong data-i18n="profile.noData">
                                             Məlumat yoxdur
                                         </strong>
                                     </div>
                                 </div>
                             </div>
                         </div>
+
                         <!-- MILITARY -->
                         <div class="profile-section" id="military">
                             <div class="section-card">
-                                <h3>
+                                <h3 data-i18n="profile.military.title">
                                     Hərbi məlumatlar
                                 </h3>
+
                                 <div class="info-grid">
                                     <div class="info-item">
-                                        <span>
+                                        <span data-i18n="profile.military.registrationStatus">
                                             Hərbi qeydiyyat statusu
                                         </span>
-                                        <strong>
+
+                                        <strong data-i18n="profile.noData">
                                             Məlumat yoxdur
                                         </strong>
                                     </div>
+
                                     <div class="info-item">
-                                        <span>
+                                        <span data-i18n="profile.military.serviceStatus">
                                             Hərbi xidmət statusu
                                         </span>
-                                        <strong>
+
+                                        <strong data-i18n="profile.noData">
                                             Məlumat yoxdur
                                         </strong>
                                     </div>
+
                                     <div class="info-item">
-                                        <span>
+                                        <span data-i18n="profile.military.servicePlace">
                                             Hərbi xidmət yeri
                                         </span>
-                                        <strong>
+
+                                        <strong data-i18n="profile.noData">
                                             Məlumat yoxdur
                                         </strong>
                                     </div>
+
                                     <div class="info-item">
-                                        <span>
+                                        <span data-i18n="profile.military.specialty">
                                             Hərbi uçot ixtisası
                                         </span>
-                                        <strong>
+
+                                        <strong data-i18n="profile.noData">
                                             Məlumat yoxdur
                                         </strong>
                                     </div>
                                 </div>
                             </div>
                         </div>
+
                         <!-- DOCUMENTS -->
                         <div class="profile-section" id="documents">
                             <div class="section-card">
-                                <h3>
+                                <h3 data-i18n="profile.documents.title">
                                     Sənədlər
                                 </h3>
+
                                 <div class="empty-state">
                                     <i class="fa-regular fa-folder-open"></i>
-                                    <h4>
+
+                                    <h4 data-i18n="profile.documents.emptyTitle">
                                         Sənəd yoxdur
                                     </h4>
-                                    <p>
+
+                                    <p data-i18n="profile.documents.emptyDescription">
                                         Elektron sənədləriniz burada
                                         göstəriləcək.
                                     </p>
                                 </div>
                             </div>
                         </div>
+
                         <!-- NOTIFICATIONS -->
                         <div class="profile-section" id="notifications">
                             <div class="section-card">
-                                <h3>
+                                <h3 data-i18n="profile.notifications.title">
                                     Bildirişlər
                                 </h3>
+
                                 <div class="empty-state">
                                     <i class="fa-regular fa-bell"></i>
-                                    <h4>
+
+                                    <h4 data-i18n="profile.notifications.emptyTitle">
                                         Bildiriş yoxdur
                                     </h4>
-                                    <p>
+
+                                    <p data-i18n="profile.notifications.emptyDescription">
                                         Yeni bildirişləriniz burada
                                         göstəriləcək.
                                     </p>
@@ -302,7 +352,9 @@
             </div>
         </section>
 
-        <a href="chatbot.html" class="chatbot-button" aria-label="E-Səfərbərlik chatbot">
+        <a href="chatbot.html" class="chatbot-button" aria-label="E-Səfərbərlik chatbot"
+            data-i18n-aria-label="profile.chatbot.ariaLabel">
+
             <span class="chatbot-icon" aria-hidden="true">
                 <div class="imgbox">
                     <img src="Assets/chatbot.png" alt="">
@@ -316,29 +368,37 @@
         <div class="profile-footer-nav">
             <button class="footer-nav-item active" data-section="overview">
                 <i class="fa-solid fa-house"></i>
-                <span>Əsas</span>
+                <span data-i18n="profile.footer.home">Əsas</span>
             </button>
+
             <button class="footer-nav-item" data-section="personal">
                 <i class="fa-solid fa-user"></i>
-                <span>Kabinet</span>
+                <span data-i18n="profile.footer.profile">Kabinet</span>
             </button>
+
             <button class="footer-nav-item" data-section="military">
                 <i class="fa-solid fa-shield-halved"></i>
-                <span>Hərbi</span>
+                <span data-i18n="profile.footer.military">Hərbi</span>
             </button>
+
             <button class="footer-nav-item" data-section="documents">
                 <i class="fa-solid fa-file-lines"></i>
-                <span>Sənədlər</span>
+                <span data-i18n="profile.footer.documents">Sənədlər</span>
             </button>
+
             <button class="footer-nav-item" data-section="notifications">
                 <span class="footer-notification-icon">
                     <i class="fa-solid fa-bell"></i>
                     <small>0</small>
                 </span>
-                <span>Bildiriş</span>
+
+                <span data-i18n="profile.footer.notifications">
+                    Bildiriş
+                </span>
             </button>
         </div>
     </footer>
+
 </body>
 
 </html>

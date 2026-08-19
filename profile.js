@@ -26,6 +26,8 @@ $(document).ready(function () {
 
     function openSection(section) {
 
+        localStorage.setItem("profileSection", section);
+
         $(".profile-menu-item").removeClass("active");
         $('.profile-menu-item[data-section="' + section + '"]')
             .addClass("active");
@@ -33,25 +35,26 @@ $(document).ready(function () {
         $(".footer-nav-item").removeClass("active");
         $('.footer-nav-item[data-section="' + section + '"]')
             .addClass("active");
+
         $(".profile-section").removeClass("active");
         $("#" + section).addClass("active");
 
         const titles = {
-            overview: "Ümumi məlumat",
-            personal: "Şəxsi məlumatlar",
-            military: "Hərbi məlumatlar",
-            documents: "Sənədlər",
-            notifications: "Bildirişlər"
+            overview: "profile.topbar.title",
+            personal: "profile.personal.title",
+            military: "profile.military.title",
+            documents: "profile.documents.title",
+            notifications: "profile.notifications.title"
         };
 
-
-        $("#page-title").text(titles[section]);
+        $("#page-title").attr("data-i18n", titles[section]);
 
         window.scrollTo({
             top: 0,
             behavior: "smooth"
         });
     }
+
 
     // ==========================================
     // BİLDİRİŞ DÜYMƏSİ
@@ -67,8 +70,9 @@ $(document).ready(function () {
     // ==========================================
 
     $("#logout-button").on("click", function () {
-        // müvəqqəti olaraq
+
         window.location.href = "./index.html";
+
         /*
             Backend və myGov inteqrasiyası hazır deyil.
             Daha sonra burada:
@@ -77,6 +81,7 @@ $(document).ready(function () {
             - istifadəçinin index.html-ə
               yönləndirilməsi əlavə olunacaq.
         */
+
         console.log("Logout: backend və myGov inteqrasiyası gözlənilir.");
     });
 
@@ -86,31 +91,44 @@ $(document).ready(function () {
     // ==========================================
 
     $(".language span").on("click", function () {
+
         $(".language span").removeClass("active");
         $(this).addClass("active");
+
         const language = $(this).text();
+
         console.log("Seçilmiş dil:", language);
-        // Tərcümə sistemi sonra əlavə olunacaq.
+
+        // Tərcümə sistemi translation.js tərəfindən idarə olunur.
     });
+
 
     // ==========================================
     // FOOTER
     // ==========================================
 
     $(".footer-nav-item").on("click", function () {
+
         const section = $(this).data("section");
+
         $(".footer-nav-item").removeClass("active");
         $(this).addClass("active");
+
         openSection(section);
     });
 
+
     // ==========================================
-    // API-DƏN PROFİL MƏLUMATLARINI AL MYGOV-a Inteqrsiya olandan sonra
+    // API-DƏN PROFİL MƏLUMATLARINI AL
+    // MYGOV-a inteqrasiya olandan sonra
     // ==========================================
 
     function loadProfile() {
+
         fetch("API_URL")
+
             .then(response => response.json())
+
             .then(data => {
 
                 $("#personal .info-item:nth-child(1) strong")
@@ -124,18 +142,40 @@ $(document).ready(function () {
 
                 $("#personal .info-item:nth-child(4) strong")
                     .text(data.phone);
+
             })
+
             .catch(error => {
-                console.error("Profil məlumatları alınarkən xəta:", error);
+
+                console.error(
+                    "Profil məlumatları alınarkən xəta:",
+                    error
+                );
+
             });
     }
+
 
     // Profil məlumatlarını yüklə
     loadProfile();
 
 
-    // chatbot
-    const chatbotButton = document.querySelector(".chatbot-button");
+    // ==========================================
+    // YADDA SAXLANMIŞ BÖLMƏNİ AÇ
+    // ==========================================
+
+    const savedSection =
+        localStorage.getItem("profileSection") || "overview";
+
+    openSection(savedSection);
+
+
+    // ==========================================
+    // CHATBOT
+    // ==========================================
+
+    const chatbotButton =
+        document.querySelector(".chatbot-button");
 
     if (chatbotButton) {
 
@@ -148,124 +188,186 @@ $(document).ready(function () {
         let startLeft = 0;
         let startTop = 0;
 
-        chatbotButton.addEventListener("pointerdown", function (e) {
 
-            isDragging = true;
-            moved = false;
+        chatbotButton.addEventListener(
+            "pointerdown",
+            function (e) {
 
-            const rect = chatbotButton.getBoundingClientRect();
+                isDragging = true;
+                moved = false;
 
-            startX = e.clientX;
-            startY = e.clientY;
+                const rect =
+                    chatbotButton.getBoundingClientRect();
 
-            startLeft = rect.left;
-            startTop = rect.top;
+                startX = e.clientX;
+                startY = e.clientY;
 
-            // right / bottom artıq istifadə olunmasın
-            chatbotButton.style.right = "auto";
-            chatbotButton.style.bottom = "auto";
+                startLeft = rect.left;
+                startTop = rect.top;
 
-            chatbotButton.style.left = startLeft + "px";
-            chatbotButton.style.top = startTop + "px";
+                chatbotButton.style.right = "auto";
+                chatbotButton.style.bottom = "auto";
 
-            chatbotButton.classList.add("dragging");
+                chatbotButton.style.left =
+                    startLeft + "px";
 
+                chatbotButton.style.top =
+                    startTop + "px";
 
-            chatbotButton.setPointerCapture(e.pointerId);
+                chatbotButton.classList.add("dragging");
 
-            e.preventDefault();
-        });
+                chatbotButton.setPointerCapture(
+                    e.pointerId
+                );
 
-
-        document.addEventListener("pointermove", function (e) {
-
-            if (!isDragging) return;
-
-            const deltaX = e.clientX - startX;
-            const deltaY = e.clientY - startY;
-
-            if (Math.abs(deltaX) > 3 || Math.abs(deltaY) > 3) {
-                moved = true;
+                e.preventDefault();
             }
-
-            const buttonWidth = chatbotButton.offsetWidth;
-            const buttonHeight = chatbotButton.offsetHeight;
-
-            const gap = 30;
-
-            let newLeft = startLeft + deltaX;
-            let newTop = startTop + deltaY;
+        );
 
 
-            // SOL
-            newLeft = Math.max(
-                gap,
-                newLeft
-            );
+        document.addEventListener(
+            "pointermove",
+            function (e) {
+
+                if (!isDragging) return;
+
+                const deltaX =
+                    e.clientX - startX;
+
+                const deltaY =
+                    e.clientY - startY;
+
+                if (
+                    Math.abs(deltaX) > 3 ||
+                    Math.abs(deltaY) > 3
+                ) {
+                    moved = true;
+                }
+
+                const buttonWidth =
+                    chatbotButton.offsetWidth;
+
+                const buttonHeight =
+                    chatbotButton.offsetHeight;
+
+                const gap = 30;
+
+                let newLeft =
+                    startLeft + deltaX;
+
+                let newTop =
+                    startTop + deltaY;
 
 
-            // SAĞ
-            newLeft = Math.min(
-                newLeft,
-                window.innerWidth - buttonWidth - gap
-            );
+                // SOL
+
+                newLeft = Math.max(
+                    gap,
+                    newLeft
+                );
 
 
-            // YUXARI
-            newTop = Math.max(
-                gap,
-                newTop
-            );
+                // SAĞ
+
+                newLeft = Math.min(
+                    newLeft,
+                    window.innerWidth -
+                    buttonWidth -
+                    gap
+                );
 
 
-            // AŞAĞI
-            newTop = Math.min(
-                newTop,
-                window.innerHeight - buttonHeight - gap
-            );
+                // YUXARI
+
+                newTop = Math.max(
+                    gap,
+                    newTop
+                );
 
 
-            chatbotButton.style.left = newLeft + "px";
-            chatbotButton.style.top = newTop + "px";
+                // AŞAĞI
 
-            e.preventDefault();
+                newTop = Math.min(
+                    newTop,
+                    window.innerHeight -
+                    buttonHeight -
+                    gap
+                );
 
-        }, { passive: false });
 
+                chatbotButton.style.left =
+                    newLeft + "px";
 
-        document.addEventListener("pointerup", function (e) {
+                chatbotButton.style.top =
+                    newTop + "px";
 
-            if (!isDragging) return;
+                e.preventDefault();
 
-            isDragging = false;
-
-            chatbotButton.classList.remove("dragging");
-
-            if (chatbotButton.hasPointerCapture(e.pointerId)) {
-                chatbotButton.releasePointerCapture(e.pointerId);
+            },
+            {
+                passive: false
             }
+        );
 
-        });
+
+        document.addEventListener(
+            "pointerup",
+            function (e) {
+
+                if (!isDragging) return;
+
+                isDragging = false;
+
+                chatbotButton.classList.remove(
+                    "dragging"
+                );
+
+                if (
+                    chatbotButton.hasPointerCapture(
+                        e.pointerId
+                    )
+                ) {
+
+                    chatbotButton.releasePointerCapture(
+                        e.pointerId
+                    );
+
+                }
+
+            }
+        );
 
 
-        document.addEventListener("pointercancel", function () {
+        document.addEventListener(
+            "pointercancel",
+            function () {
 
-            isDragging = false;
+                isDragging = false;
 
-            chatbotButton.classList.remove("dragging");
+                chatbotButton.classList.remove(
+                    "dragging"
+                );
 
-        });
+            }
+        );
 
 
         // Sürüşdürmə yoxdursa chatbot.html-ə keç
-        chatbotButton.addEventListener("click", function (e) {
 
-            if (moved) {
-                e.preventDefault();
-                moved = false;
+        chatbotButton.addEventListener(
+            "click",
+            function (e) {
+
+                if (moved) {
+
+                    e.preventDefault();
+
+                    moved = false;
+                }
+
             }
+        );
 
-        });
     }
 
 });

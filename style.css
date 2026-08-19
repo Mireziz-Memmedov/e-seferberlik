@@ -2005,10 +2005,13 @@ body#faq-page.dark-mode #faq .faq-item .faq-answer a {
     height: 42px;
   }
   #chatbot-header .logo .text h2 {
-    font-size: 17px;
+    font-size: 10px;
   }
   #chatbot-header .logo .text span {
-    font-size: 12px;
+    font-size: 7px;
+  }
+  #chatbot-header .dark-mode-button {
+    margin-right: 0;
   }
   #chatbot-header .back-button span {
     display: none;

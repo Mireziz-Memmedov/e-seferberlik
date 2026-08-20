@@ -1,21 +1,25 @@
 $(document).ready(function () {
 
     // ==========================================
-    // BÖLMƏLƏR ARASINDA KEÇİD
+    // BÖLMƏLƏR
     // ==========================================
 
     $(".profile-menu-item").on("click", function () {
+
         const section = $(this).data("section");
+
         openSection(section);
     });
 
 
     // ==========================================
-    // KARTLARDAN BÖLMƏYƏ KEÇİD
+    // DASHBOARD KARTLARI
     // ==========================================
 
     $(".dashboard-card").on("click", function () {
+
         const section = $(this).data("section");
+
         openSection(section);
     });
 
@@ -26,28 +30,151 @@ $(document).ready(function () {
 
     function openSection(section) {
 
-        localStorage.setItem("profileSection", section);
+        // ==========================================
+        // YADDA SAXLA
+        // ==========================================
 
-        $(".profile-menu-item").removeClass("active");
+        localStorage.setItem(
+            "profileSection",
+            section
+        );
+
+
+        // ==========================================
+        // MENU ACTIVE
+        // ==========================================
+
+        $(".profile-menu-item")
+            .removeClass("active");
+
         $('.profile-menu-item[data-section="' + section + '"]')
             .addClass("active");
 
-        $(".footer-nav-item").removeClass("active");
+
+        // ==========================================
+        // FOOTER ACTIVE
+        // ==========================================
+
+        $(".footer-nav-item")
+            .removeClass("active");
+
         $('.footer-nav-item[data-section="' + section + '"]')
             .addClass("active");
 
-        $(".profile-section").removeClass("active");
-        $("#" + section).addClass("active");
 
-        const titles = {
-            overview: "profile.topbar.title",
-            personal: "profile.personal.title",
-            military: "profile.military.title",
-            documents: "profile.documents.title",
-            notifications: "profile.notifications.title"
-        };
+        // ==========================================
+        // BÜTÜN PROFILE SECTION-LARI BAĞLA
+        // ==========================================
 
-        $("#page-title").attr("data-i18n", titles[section]);
+        $(".profile-section")
+            .removeClass("active");
+
+
+        // ==========================================
+        // SEÇİLƏN SECTION-U AÇ
+        // ==========================================
+
+        $("#" + section)
+            .addClass("active");
+
+
+        // ==========================================
+        // OVERVIEW
+        // ==========================================
+
+        if (section === "overview") {
+
+            // Normal kabineti göstər
+            $(".profile-sidebar").show();
+
+            $(".profile-topbar").show();
+
+            // Dashboard-u göstər
+            $(".profile-dashboard").removeClass(
+                "single-section-mode"
+            );
+
+
+            // Yalnız overview
+            $("#overview")
+                .addClass("active");
+
+
+            // Başlıq
+            $("#page-title")
+                .attr(
+                    "data-i18n",
+                    "profile.topbar.title"
+                );
+        }
+
+
+        // ==========================================
+        // DİGƏR BÖLMƏLƏR
+        // ==========================================
+
+        else {
+
+            // Sidebar gizlənsin
+            $(".profile-sidebar").hide();
+
+
+            // Topbar gizlənsin
+            $(".profile-topbar").hide();
+
+
+            // Dashboard xüsusi rejimə keçsin
+            $(".profile-dashboard").addClass(
+                "single-section-mode"
+            );
+
+
+            // Seçilən bölməni göstər
+            $("#" + section)
+                .addClass("active");
+
+
+            // Başlıqlar
+            const titles = {
+
+                personal:
+                    "profile.personal.title",
+
+                military:
+                    "profile.military.title",
+
+                documents:
+                    "profile.documents.title",
+
+                notifications:
+                    "profile.notifications.title"
+            };
+
+
+            $("#page-title")
+                .attr(
+                    "data-i18n",
+                    titles[section]
+                );
+        }
+
+
+        // ==========================================
+        // TRANSLATION
+        // ==========================================
+
+        if (
+            typeof applyTranslations ===
+            "function"
+        ) {
+
+            applyTranslations();
+        }
+
+
+        // ==========================================
+        // SƏHİFƏNİN YUXARISINA
+        // ==========================================
 
         window.scrollTo({
             top: 0,
@@ -57,78 +184,86 @@ $(document).ready(function () {
 
 
     // ==========================================
-    // BİLDİRİŞ DÜYMƏSİ
+    // BİLDİRİŞ BUTTON
     // ==========================================
 
-    $("#notification-button").on("click", function () {
-        openSection("notifications");
-    });
+    $("#notification-button").on(
+        "click",
+        function () {
+
+            openSection("notifications");
+        }
+    );
 
 
     // ==========================================
-    // ÇIXIŞ
+    // LOGOUT
     // ==========================================
 
-    $("#logout-button").on("click", function () {
+    $("#logout-button").on(
+        "click",
+        function () {
 
-        window.location.href = "./index.html";
+            window.location.href =
+                "./index.html";
 
-        /*
-            Backend və myGov inteqrasiyası hazır deyil.
-            Daha sonra burada:
-            - myGov sessiyasının bağlanması
-            - backend logout endpoint-i
-            - istifadəçinin index.html-ə
-              yönləndirilməsi əlavə olunacaq.
-        */
-
-        console.log("Logout: backend və myGov inteqrasiyası gözlənilir.");
-    });
+            console.log(
+                "Logout: backend və myGov inteqrasiyası gözlənilir."
+            );
+        }
+    );
 
 
     // ==========================================
     // DİL SEÇİMİ
     // ==========================================
 
-    $(".language span").on("click", function () {
+    $(".language span").on(
+        "click",
+        function () {
 
-        $(".language span").removeClass("active");
-        $(this).addClass("active");
+            $(".language span")
+                .removeClass("active");
 
-        const language = $(this).text();
+            $(this)
+                .addClass("active");
 
-        console.log("Seçilmiş dil:", language);
+            const language =
+                $(this).data("lang");
 
-        // Tərcümə sistemi translation.js tərəfindən idarə olunur.
-    });
+            console.log(
+                "Seçilmiş dil:",
+                language
+            );
+        }
+    );
 
 
     // ==========================================
     // FOOTER
     // ==========================================
 
-    $(".footer-nav-item").on("click", function () {
+    $(".footer-nav-item").on(
+        "click",
+        function () {
 
-        const section = $(this).data("section");
+            const section =
+                $(this).data("section");
 
-        $(".footer-nav-item").removeClass("active");
-        $(this).addClass("active");
-
-        openSection(section);
-    });
+            openSection(section);
+        }
+    );
 
 
     // ==========================================
-    // API-DƏN PROFİL MƏLUMATLARINI AL
-    // MYGOV-a inteqrasiya olandan sonra
+    // PROFİL MƏLUMATLARI
     // ==========================================
 
     function loadProfile() {
 
+        /*
         fetch("API_URL")
-
             .then(response => response.json())
-
             .then(data => {
 
                 $("#personal .info-item:nth-child(1) strong")
@@ -144,7 +279,6 @@ $(document).ready(function () {
                     .text(data.phone);
 
             })
-
             .catch(error => {
 
                 console.error(
@@ -153,19 +287,22 @@ $(document).ready(function () {
                 );
 
             });
+        */
     }
 
 
-    // Profil məlumatlarını yüklə
     loadProfile();
 
 
     // ==========================================
-    // YADDA SAXLANMIŞ BÖLMƏNİ AÇ
+    // YADDA SAXLANMIŞ BÖLMƏ
     // ==========================================
 
     const savedSection =
-        localStorage.getItem("profileSection") || "overview";
+        localStorage.getItem(
+            "profileSection"
+        ) || "overview";
+
 
     openSection(savedSection);
 
@@ -175,7 +312,10 @@ $(document).ready(function () {
     // ==========================================
 
     const chatbotButton =
-        document.querySelector(".chatbot-button");
+        document.querySelector(
+            ".chatbot-button"
+        );
+
 
     if (chatbotButton) {
 
@@ -189,6 +329,10 @@ $(document).ready(function () {
         let startTop = 0;
 
 
+        // ==========================================
+        // POINTER DOWN
+        // ==========================================
+
         chatbotButton.addEventListener(
             "pointerdown",
             function (e) {
@@ -199,14 +343,20 @@ $(document).ready(function () {
                 const rect =
                     chatbotButton.getBoundingClientRect();
 
+
                 startX = e.clientX;
                 startY = e.clientY;
 
                 startLeft = rect.left;
                 startTop = rect.top;
 
-                chatbotButton.style.right = "auto";
-                chatbotButton.style.bottom = "auto";
+
+                chatbotButton.style.right =
+                    "auto";
+
+                chatbotButton.style.bottom =
+                    "auto";
+
 
                 chatbotButton.style.left =
                     startLeft + "px";
@@ -214,16 +364,25 @@ $(document).ready(function () {
                 chatbotButton.style.top =
                     startTop + "px";
 
-                chatbotButton.classList.add("dragging");
+
+                chatbotButton.classList.add(
+                    "dragging"
+                );
+
 
                 chatbotButton.setPointerCapture(
                     e.pointerId
                 );
 
+
                 e.preventDefault();
             }
         );
 
+
+        // ==========================================
+        // POINTER MOVE
+        // ==========================================
 
         document.addEventListener(
             "pointermove",
@@ -231,18 +390,22 @@ $(document).ready(function () {
 
                 if (!isDragging) return;
 
+
                 const deltaX =
                     e.clientX - startX;
 
                 const deltaY =
                     e.clientY - startY;
 
+
                 if (
                     Math.abs(deltaX) > 3 ||
                     Math.abs(deltaY) > 3
                 ) {
+
                     moved = true;
                 }
+
 
                 const buttonWidth =
                     chatbotButton.offsetWidth;
@@ -250,7 +413,9 @@ $(document).ready(function () {
                 const buttonHeight =
                     chatbotButton.offsetHeight;
 
+
                 const gap = 30;
+
 
                 let newLeft =
                     startLeft + deltaX;
@@ -301,6 +466,7 @@ $(document).ready(function () {
                 chatbotButton.style.top =
                     newTop + "px";
 
+
                 e.preventDefault();
 
             },
@@ -310,17 +476,24 @@ $(document).ready(function () {
         );
 
 
+        // ==========================================
+        // POINTER UP
+        // ==========================================
+
         document.addEventListener(
             "pointerup",
             function (e) {
 
                 if (!isDragging) return;
 
+
                 isDragging = false;
+
 
                 chatbotButton.classList.remove(
                     "dragging"
                 );
+
 
                 if (
                     chatbotButton.hasPointerCapture(
@@ -331,12 +504,14 @@ $(document).ready(function () {
                     chatbotButton.releasePointerCapture(
                         e.pointerId
                     );
-
                 }
-
             }
         );
 
+
+        // ==========================================
+        // POINTER CANCEL
+        // ==========================================
 
         document.addEventListener(
             "pointercancel",
@@ -347,12 +522,13 @@ $(document).ready(function () {
                 chatbotButton.classList.remove(
                     "dragging"
                 );
-
             }
         );
 
 
-        // Sürüşdürmə yoxdursa chatbot.html-ə keç
+        // ==========================================
+        // CHATBOT CLICK
+        // ==========================================
 
         chatbotButton.addEventListener(
             "click",
@@ -364,10 +540,8 @@ $(document).ready(function () {
 
                     moved = false;
                 }
-
             }
         );
-
     }
 
 });

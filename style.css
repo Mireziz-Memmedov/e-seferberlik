@@ -2000,18 +2000,24 @@ body#faq-page.dark-mode #faq .faq-item .faq-answer a {
   #chatbot-header .chatbot-header-content {
     min-height: 70px;
   }
+  #chatbot-header .logo {
+    gap: 5px;
+  }
   #chatbot-header .logo .imgbox {
-    width: 42px;
-    height: 42px;
+    width: 30px;
+    height: 30px;
   }
   #chatbot-header .logo .text h2 {
-    font-size: 10px;
+    font-size: 12px;
   }
   #chatbot-header .logo .text span {
-    font-size: 7px;
+    font-size: 10px;
   }
   #chatbot-header .dark-mode-button {
-    margin-right: 0;
+    margin-right: 3px;
+  }
+  #chatbot-header .language {
+    gap: 0;
   }
   #chatbot-header .back-button span {
     display: none;

@@ -75,6 +75,7 @@
             "overview": "Ümumi məlumat",
             "personal": "Şəxsi məlumatlar",
             "military": "Hərbi məlumatlar",
+            "certificates": "Arayışlar",
             "payment": "Ödənişlər",
             "documents": "Sənədlər",
             "notifications": "Bildirişlər"
@@ -119,6 +120,22 @@
             "servicePlace": "Hərbi xidmət yeri",
             "specialty": "Hərbi uçot ixtisası"
         },
+        "certificates": {
+            "title": "Arayışlar",
+            "registration": {
+                "title": "Hərbi qeydiyyat haqqında arayış",
+                "description": "Hərbi qeydiyyat məlumatlarınızı təsdiq edən elektron arayış."
+            },
+            "service": {
+                "title": "Hərbi xidmət haqqında arayış",
+                "description": "Hərbi xidmət məlumatlarınızı göstərən elektron arayış."
+            },
+            "status": {
+                "title": "Hərbi status haqqında arayış",
+                "description": "Cari hərbi statusunuzu təsdiq edən elektron arayış."
+            },
+            "get": "Arayış al"
+        },
         "payment": {
             "title": "Ödənişlər",
             "paymentStatus": "Ödəniş statusu",
@@ -140,6 +157,7 @@
             "home": "Əsas",
             "profile": "Kabinet",
             "military": "Hərbi",
+            "certificates": "Arayışlar",
             "payment": "Ödənişlər",
             "documents": "Sənədlər",
             "notifications": "Bildiriş"

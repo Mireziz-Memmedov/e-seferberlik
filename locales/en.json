@@ -75,6 +75,7 @@
             "overview": "Overview",
             "personal": "Personal Information",
             "military": "Military Information",
+            "certificates": "Certificates",
             "payment": "Payments",
             "documents": "Documents",
             "notifications": "Notifications"
@@ -119,6 +120,22 @@
             "servicePlace": "Place of Military Service",
             "specialty": "Military Registration Specialty"
         },
+        "certificates": {
+            "title": "Certificates",
+            "registration": {
+                "title": "Military Registration Certificate",
+                "description": "An electronic certificate confirming your military registration information."
+            },
+            "service": {
+                "title": "Military Service Certificate",
+                "description": "An electronic certificate showing your military service information."
+            },
+            "status": {
+                "title": "Military Status Certificate",
+                "description": "An electronic certificate confirming your current military status."
+            },
+            "get": "Get Certificate"
+        },
         "payment": {
             "title": "Payments",
             "paymentStatus": "Payment status",
@@ -140,6 +157,7 @@
             "home": "Home",
             "profile": "Cabinet",
             "military": "Military",
+            "certificates": "Certificates",
             "payment": "Payments",
             "documents": "Documents",
             "notifications": "Notifications"

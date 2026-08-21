@@ -75,6 +75,7 @@
             "overview": "Общая информация",
             "personal": "Личная информация",
             "military": "Военная информация",
+            "payment": "Платежи",
             "documents": "Документы",
             "notifications": "Уведомления"
         },
@@ -118,6 +119,13 @@
             "servicePlace": "Место прохождения военной службы",
             "specialty": "Военно-учётная специальность"
         },
+        "payment": {
+            "title": "Платежи",
+            "paymentStatus": "Статус платежа",
+            "paymentType": "Тип платежа",
+            "amount": "Сумма платежа",
+            "paymentDate": "Дата платежа"
+        },
         "documents": {
             "title": "Документы",
             "emptyTitle": "Документов нет",
@@ -132,6 +140,7 @@
             "home": "Главная",
             "profile": "Кабинет",
             "military": "Военные данные",
+            "payment": "Платежи",
             "documents": "Документы",
             "notifications": "Уведомления"
         },

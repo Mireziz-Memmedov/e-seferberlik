@@ -4,6 +4,12 @@ $(document).ready(function () {
     // BÖLMƏLƏR
     // ==========================================
 
+    $("#brand-home").on("click", function (e) {
+        e.preventDefault();
+
+        openSection("overview");
+    });
+
     $(".profile-menu-item").on("click", function () {
 
         const section = $(this).data("section");
@@ -143,6 +149,9 @@ $(document).ready(function () {
                 military:
                     "profile.military.title",
 
+                payment:
+                    "profile.payment.title",
+
                 documents:
                     "profile.documents.title",
 
@@ -181,6 +190,16 @@ $(document).ready(function () {
             behavior: "smooth"
         });
     }
+
+    // ==========================================
+    // GERİ BUTTON
+    // ==========================================
+
+    $(".back-button").on("click", function () {
+
+        openSection("overview");
+
+    });
 
 
     // ==========================================

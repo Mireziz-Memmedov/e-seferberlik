@@ -75,6 +75,7 @@
             "overview": "Overview",
             "personal": "Personal Information",
             "military": "Military Information",
+            "payment": "Payments",
             "documents": "Documents",
             "notifications": "Notifications"
         },
@@ -118,6 +119,13 @@
             "servicePlace": "Place of Military Service",
             "specialty": "Military Registration Specialty"
         },
+        "payment": {
+            "title": "Payments",
+            "paymentStatus": "Payment status",
+            "paymentType": "Payment type",
+            "amount": "Payment amount",
+            "paymentDate": "Payment date"
+        },
         "documents": {
             "title": "Documents",
             "emptyTitle": "No Documents",
@@ -132,6 +140,7 @@
             "home": "Home",
             "profile": "Cabinet",
             "military": "Military",
+            "payment": "Payments",
             "documents": "Documents",
             "notifications": "Notifications"
         },

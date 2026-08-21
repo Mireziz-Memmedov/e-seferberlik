@@ -75,6 +75,7 @@
             "overview": "Ümumi məlumat",
             "personal": "Şəxsi məlumatlar",
             "military": "Hərbi məlumatlar",
+            "payment": "Ödənişlər",
             "documents": "Sənədlər",
             "notifications": "Bildirişlər"
         },
@@ -118,6 +119,13 @@
             "servicePlace": "Hərbi xidmət yeri",
             "specialty": "Hərbi uçot ixtisası"
         },
+        "payment": {
+            "title": "Ödənişlər",
+            "paymentStatus": "Ödəniş statusu",
+            "paymentType": "Ödəniş növü",
+            "amount": "Ödəniş məbləği",
+            "paymentDate": "Ödəniş tarixi"
+        },
         "documents": {
             "title": "Sənədlər",
             "emptyTitle": "Sənəd yoxdur",
@@ -132,6 +140,7 @@
             "home": "Əsas",
             "profile": "Kabinet",
             "military": "Hərbi",
+            "payment": "Ödənişlər",
             "documents": "Sənədlər",
             "notifications": "Bildiriş"
         },

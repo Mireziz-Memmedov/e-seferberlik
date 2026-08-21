@@ -26,7 +26,7 @@
             <div class="container">
                 <div class="row align-items-center justify-content-between">
                     <div class="col-auto">
-                        <a href="profile.html" class="brand">
+                        <a href="#" class="brand" id="brand-home">
                             <div class="brand-logo">
                                 <img src="Assets/SF.png" alt="E-Səfərbərlik">
                             </div>
@@ -85,6 +85,11 @@
                             <button class="profile-menu-item" data-section="military">
                                 <i class="fa-solid fa-shield-halved"></i>
                                 <span data-i18n="profile.menu.military">Hərbi məlumatlar</span>
+                            </button>
+
+                            <button class="profile-menu-item" data-section="payment">
+                                <i class="fas fa-credit-card"></i>
+                                <span data-i18n="profile.menu.payment">Ödənişlər</span>
                             </button>
 
                             <button class="profile-menu-item" data-section="documents">
@@ -205,8 +210,15 @@
                         <!-- PERSONAL -->
                         <div class="profile-section" id="personal">
                             <div class="section-card">
-                                <h3 data-i18n="profile.personal.title">
-                                    Şəxsi məlumatlar
+
+                                <h3>
+                                    <button class="back-button" type="button">
+                                        <i class="fa-solid fa-arrow-left"></i>
+                                    </button>
+
+                                    <span data-i18n="profile.personal.title">
+                                        Şəxsi məlumatlar
+                                    </span>
                                 </h3>
 
                                 <div class="info-grid">
@@ -256,8 +268,15 @@
                         <!-- MILITARY -->
                         <div class="profile-section" id="military">
                             <div class="section-card">
-                                <h3 data-i18n="profile.military.title">
-                                    Hərbi məlumatlar
+
+                                <h3>
+                                    <button class="back-button" type="button">
+                                        <i class="fa-solid fa-arrow-left"></i>
+                                    </button>
+
+                                    <span data-i18n="profile.military.title">
+                                        Hərbi məlumatlar
+                                    </span>
                                 </h3>
 
                                 <div class="info-grid">
@@ -304,11 +323,78 @@
                             </div>
                         </div>
 
+                        <!-- Payment -->
+                        <div class="profile-section" id="payment">
+                            <div class="section-card">
+
+                                <h3>
+                                    <button class="back-button" type="button">
+                                        <i class="fa-solid fa-arrow-left"></i>
+                                    </button>
+
+                                    <span data-i18n="profile.payment.title">
+                                        Ödənişlər
+                                    </span>
+                                </h3>
+
+                                <div class="info-grid">
+
+                                    <div class="info-item">
+                                        <span data-i18n="profile.payment.paymentStatus">
+                                            Ödəniş statusu
+                                        </span>
+
+                                        <strong data-i18n="profile.noData">
+                                            Məlumat yoxdur
+                                        </strong>
+                                    </div>
+
+                                    <div class="info-item">
+                                        <span data-i18n="profile.payment.paymentType">
+                                            Ödəniş növü
+                                        </span>
+
+                                        <strong data-i18n="profile.noData">
+                                            Məlumat yoxdur
+                                        </strong>
+                                    </div>
+
+                                    <div class="info-item">
+                                        <span data-i18n="profile.payment.amount">
+                                            Ödəniş məbləği
+                                        </span>
+
+                                        <strong data-i18n="profile.noData">
+                                            Məlumat yoxdur
+                                        </strong>
+                                    </div>
+
+                                    <div class="info-item">
+                                        <span data-i18n="profile.payment.paymentDate">
+                                            Ödəniş tarixi
+                                        </span>
+
+                                        <strong data-i18n="profile.noData">
+                                            Məlumat yoxdur
+                                        </strong>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
                         <!-- DOCUMENTS -->
                         <div class="profile-section" id="documents">
                             <div class="section-card">
-                                <h3 data-i18n="profile.documents.title">
-                                    Sənədlər
+
+                                <h3>
+                                    <button class="back-button" type="button">
+                                        <i class="fa-solid fa-arrow-left"></i>
+                                    </button>
+
+                                    <span data-i18n="profile.documents.title">
+                                        Sənədlər
+                                    </span>
                                 </h3>
 
                                 <div class="empty-state">
@@ -329,8 +415,15 @@
                         <!-- NOTIFICATIONS -->
                         <div class="profile-section" id="notifications">
                             <div class="section-card">
-                                <h3 data-i18n="profile.notifications.title">
-                                    Bildirişlər
+
+                                <h3>
+                                    <button class="back-button" type="button">
+                                        <i class="fa-solid fa-arrow-left"></i>
+                                    </button>
+
+                                    <span data-i18n="profile.notifications.title">
+                                        Bildirişlər
+                                    </span>
                                 </h3>
 
                                 <div class="empty-state">
@@ -379,6 +472,11 @@
             <button class="footer-nav-item" data-section="military">
                 <i class="fa-solid fa-shield-halved"></i>
                 <span data-i18n="profile.footer.military">Hərbi</span>
+            </button>
+
+            <button class="footer-nav-item" data-section="payment">
+                <i class="fas fa-credit-card"></i>
+                <span data-i18n="profile.footer.payment">Ödənişlər</span>
             </button>
 
             <button class="footer-nav-item" data-section="documents">

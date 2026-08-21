@@ -291,7 +291,7 @@ section {
   -webkit-touch-callout: none;
   position: fixed;
   right: 30px;
-  bottom: 30px;
+  bottom: 0px;
   width: 70px;
   height: 70px;
   display: flex;
@@ -860,10 +860,35 @@ body#login-page.dark-mode .chatbot-button:hover {
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.04);
 }
 .section-card h3 {
+  display: flex;
+  align-items: center;
   margin: 0 0 25px;
   color: #212529;
   font-size: 20px;
   font-weight: 700;
+  gap: 8px;
+}
+.section-card h3 .back-button {
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  background: transparent;
+  color: #7c7d67;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 50%;
+  transition: 0.2s;
+}
+.section-card h3 .back-button:hover {
+  background: rgba(124, 125, 103, 0.1);
+  color: #c0a916;
+}
+.section-card h3 .back-button i {
+  cursor: pointer;
 }
 
 .info-grid {
@@ -1014,6 +1039,9 @@ body#login-page.dark-mode .chatbot-button:hover {
   justify-content: space-between;
   gap: 8px;
 }
+#profile-footer .footer-nav-item * {
+  cursor: pointer;
+}
 #profile-footer .footer-nav-item {
   position: relative;
   min-width: 75px;
@@ -1029,7 +1057,6 @@ body#login-page.dark-mode .chatbot-button:hover {
   border-radius: 10px;
   font-family: "Inter", sans-serif;
   font-size: 10px;
-  cursor: pointer;
   transition: 0.25s;
 }
 #profile-footer .footer-nav-item i {
@@ -1233,6 +1260,13 @@ body#profile-page.dark-mode .section-card {
 }
 body#profile-page.dark-mode .section-card h3 {
   color: #f1f1ed;
+}
+body#profile-page.dark-mode .section-card h3 .back-button {
+  color: #d0d0c2;
+}
+body#profile-page.dark-mode .section-card h3 .back-button:hover {
+  background: rgba(255, 255, 255, 0.08);
+  color: #c0a916;
 }
 body#profile-page.dark-mode .info-item {
   background: #2d2e2b;

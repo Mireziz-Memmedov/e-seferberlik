@@ -291,7 +291,7 @@ section {
   -webkit-touch-callout: none;
   position: fixed;
   right: 30px;
-  bottom: 0px;
+  bottom: 55px;
   width: 70px;
   height: 70px;
   display: flex;
@@ -548,16 +548,16 @@ body#login-page.dark-mode .chatbot-button:hover {
 
 @media (max-width: 576px) {
   #profile-page #profile-header .brand .brand-logo img {
-    width: 50px;
+    width: 40px;
   }
   #profile-page #profile-header .brand .brand-text {
     margin-left: 8px;
   }
   #profile-page #profile-header .brand .brand-text h1 {
-    font-size: 20px;
+    font-size: 14px;
   }
   #profile-page #profile-header .brand .brand-text p {
-    font-size: 12px;
+    font-size: 11px;
   }
   #profile-page #profile-header .language span {
     padding: 0;
@@ -1112,12 +1112,12 @@ body#login-page.dark-mode .chatbot-button:hover {
     gap: 2px;
   }
   #profile-footer .footer-nav-item {
-    min-width: 58px;
+    min-width: 45px;
     padding: 6px 7px;
-    font-size: 9px;
+    font-size: 7px;
   }
   #profile-footer .footer-nav-item i {
-    font-size: 15px;
+    font-size: 12px;
   }
   #profile-footer .footer-notification-icon small {
     min-width: 14px;

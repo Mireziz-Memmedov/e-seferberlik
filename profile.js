@@ -22,7 +22,12 @@ $(document).ready(function () {
     // DASHBOARD KARTLARI
     // ==========================================
 
-    $(".dashboard-card").on("click", function () {
+    $(".dashboard-card").on("click", function (e) {
+
+        // Arayış kartıdırsa, ümumi openSection işləməsin
+        if ($(this).hasClass("certificate-card")) {
+            return;
+        }
 
         const section = $(this).data("section");
 
@@ -156,7 +161,10 @@ $(document).ready(function () {
                     "profile.documents.title",
 
                 notifications:
-                    "profile.notifications.title"
+                    "profile.notifications.title",
+
+                certificates:
+                    "profile.certificates.title"
             };
 
 
@@ -195,8 +203,26 @@ $(document).ready(function () {
     // GERİ BUTTON
     // ==========================================
 
-    $(".back-button").on("click", function () {
+    $(".back-button").on("click", function (e) {
 
+        // Əgər arayış detail açıqdırsa
+        if ($(".certificate-detail").is(":visible")) {
+
+            e.preventDefault();
+            e.stopImmediatePropagation();
+
+            $(".certificate-detail").hide();
+            $(".certificates-list").show();
+
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+
+            return;
+        }
+
+        // Digər bölmələrdə overview-ə qayıt
         openSection("overview");
 
     });
@@ -272,6 +298,96 @@ $(document).ready(function () {
             openSection(section);
         }
     );
+
+    // ==========================================
+    // ARAYIŞLAR
+    // ==========================================
+
+    $(".certificate-card").on("click", function (e) {
+
+        e.preventDefault();
+        e.stopPropagation();
+
+        const certificate = $(this)
+            .find(".certificate-open")
+            .data("certificate");
+
+        // Arayışlar siyahısını gizlət
+        $(".certificates-list").hide();
+
+        // Detail-i göstər
+        $(".certificate-detail").show();
+
+        // Başlığı dəyiş
+        const titles = {
+
+            registration:
+                "profile.certificates.registration.title",
+
+            service:
+                "profile.certificates.service.title",
+
+            status:
+                "profile.certificates.status.title"
+
+        };
+
+        $(".certificate-detail-title")
+            .attr("data-i18n", titles[certificate]);
+
+        if (typeof applyTranslations === "function") {
+            applyTranslations();
+        }
+
+        // Yuxarı qalx
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
+
+    });
+
+
+    // ==========================================
+    // ARAYIŞ DETAIL-DƏN GERİ
+    // ==========================================
+
+    $(".certificate-detail-back").on("click", function () {
+
+        // Detail-i gizlət
+        $(".certificate-detail").hide();
+
+        // Arayışlar siyahısını göstər
+        $(".certificates-list").show();
+
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
+
+    });
+
+
+    // ==========================================
+    // ARAYIŞI GÖRÜNTÜLƏ
+    // ==========================================
+
+    $(".certificate-view").on("click", function () {
+
+        alert("Arayışın görüntülənməsi tezliklə əlavə olunacaq.");
+
+    });
+
+
+    // ==========================================
+    // ARAYIŞI YÜKLƏ
+    // ==========================================
+
+    $(".certificate-download").on("click", function () {
+
+        alert("Arayışın yüklənməsi tezliklə əlavə olunacaq.");
+
+    });
 
 
     // ==========================================

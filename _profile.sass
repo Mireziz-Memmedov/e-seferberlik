@@ -428,6 +428,48 @@
         font-weight: 600
         cursor: pointer
 
+// ==========================================
+// CERTIFICATE ACTIONS
+// ==========================================
+
+.certificate-actions
+    display: flex
+    align-items: center
+    gap: 12px
+    margin-top: 25px
+
+    button
+        display: inline-flex
+        align-items: center
+        justify-content: center
+        gap: 8px
+        padding: 11px 18px
+        border: 1px solid rgba(0, 0, 0, 0.08)
+        border-radius: 9px
+        background: #ffffff
+        color: #666
+        font-family: 'Inter', sans-serif
+        font-size: 13px
+        font-weight: 600
+        transition: 0.25s
+
+        i
+            font-size: 14px
+
+        &:hover
+            background: rgba(124, 125, 103, 0.08)
+            color: #7c7d67
+            border-color: rgba(124, 125, 103, 0.2)
+
+    button *
+            cursor: pointer
+
+    .certificate-view
+        color: #7c7d67
+
+    .certificate-download
+        color: #666
+
 // ========================================== 
 // SECTION CARD 
 // ========================================== 
@@ -601,6 +643,15 @@
 
     .dashboard-card
         padding: 20px
+
+    .certificate-actions
+        flex-direction: column
+        align-items: stretch
+        gap: 10px
+
+        button
+            width: 100%
+            padding: 11px 15px
 
     .section-card
         padding: 20px
@@ -865,6 +916,25 @@ body#profile-page.dark-mode
 
         .card-button
             color: #c5c5b5
+
+        // CERTIFICATE ACTIONS
+
+    .certificate-actions
+        button
+            background: #2d2e2b
+            border-color: rgba(255, 255, 255, 0.08)
+            color: #aaa
+
+            &:hover
+                background: rgba(255, 255, 255, 0.07)
+                color: #d0d0c2
+                border-color: rgba(255, 255, 255, 0.12)
+
+        .certificate-view
+            color: #d0d0c2
+
+        .certificate-download
+            color: #aaa
 
     // SECTION CARD 
 

@@ -331,7 +331,8 @@
                         <!-- CERTIFICATES -->
                         <div class="profile-section" id="certificates">
 
-                            <div class="section-card">
+                            <!-- ARAYIŞLAR SİYAHISI -->
+                            <div class="section-card certificates-list">
 
                                 <h3>
                                     <button class="back-button" type="button">
@@ -346,7 +347,7 @@
                                 <div class="dashboard-cards">
 
                                     <!-- HƏRBİ QEYDİYYAT ARAYIŞI -->
-                                    <div class="dashboard-card">
+                                    <div class="dashboard-card certificate-card">
 
                                         <div class="card-icon">
                                             <i class="fa-solid fa-file-circle-check"></i>
@@ -360,7 +361,8 @@
                                             Hərbi qeydiyyat məlumatlarınızı təsdiq edən elektron arayış.
                                         </p>
 
-                                        <button class="card-button" type="button" data-i18n="profile.certificates.get">
+                                        <button class="card-button certificate-open" type="button"
+                                            data-certificate="registration" data-i18n="profile.certificates.get">
                                             Arayış al
                                         </button>
 
@@ -368,7 +370,7 @@
 
 
                                     <!-- HƏRBİ XİDMƏT ARAYIŞI -->
-                                    <div class="dashboard-card">
+                                    <div class="dashboard-card certificate-card">
 
                                         <div class="card-icon">
                                             <i class="fa-solid fa-shield-halved"></i>
@@ -382,7 +384,8 @@
                                             Hərbi xidmət məlumatlarınızı göstərən elektron arayış.
                                         </p>
 
-                                        <button class="card-button" type="button" data-i18n="profile.certificates.get">
+                                        <button class="card-button certificate-open" type="button"
+                                            data-certificate="service" data-i18n="profile.certificates.get">
                                             Arayış al
                                         </button>
 
@@ -390,7 +393,7 @@
 
 
                                     <!-- HƏRBİ STATUS ARAYIŞI -->
-                                    <div class="dashboard-card">
+                                    <div class="dashboard-card certificate-card">
 
                                         <div class="card-icon">
                                             <i class="fa-solid fa-id-card"></i>
@@ -404,11 +407,117 @@
                                             Cari hərbi statusunuzu təsdiq edən elektron arayış.
                                         </p>
 
-                                        <button class="card-button" type="button" data-i18n="profile.certificates.get">
+                                        <button class="card-button certificate-open" type="button"
+                                            data-certificate="status" data-i18n="profile.certificates.get">
                                             Arayış al
                                         </button>
 
                                     </div>
+
+                                </div>
+
+                            </div>
+
+
+                            <!-- ARAYIŞ DETALI -->
+                            <div class="section-card certificate-detail" style="display: none;">
+
+                                <h3>
+
+                                    <button class="back-button certificate-detail-back" type="button">
+
+                                        <i class="fa-solid fa-arrow-left"></i>
+
+                                    </button>
+
+                                    <span class="certificate-detail-title"
+                                        data-i18n="profile.certificates.registration.title">
+                                        Hərbi qeydiyyat haqqında arayış
+                                    </span>
+
+                                </h3>
+
+
+                                <!-- MƏLUMATLAR -->
+                                <div class="info-grid">
+
+                                    <div class="info-item">
+
+                                        <span data-i18n="profile.certificates.detail.fullName">
+                                            Ad, soyad
+                                        </span>
+
+                                        <strong data-i18n="profile.noData">
+                                            Məlumat yoxdur
+                                        </strong>
+
+                                    </div>
+
+
+                                    <div class="info-item">
+
+                                        <span data-i18n="profile.certificates.detail.fin">
+                                            FİN
+                                        </span>
+
+                                        <strong data-i18n="profile.noData">
+                                            Məlumat yoxdur
+                                        </strong>
+
+                                    </div>
+
+
+                                    <div class="info-item">
+
+                                        <span data-i18n="profile.certificates.detail.registrationStatus">
+                                            Qeydiyyat statusu
+                                        </span>
+
+                                        <strong data-i18n="profile.noData">
+                                            Məlumat yoxdur
+                                        </strong>
+
+                                    </div>
+
+
+                                    <div class="info-item">
+
+                                        <span data-i18n="profile.certificates.detail.registrationPlace">
+                                            Qeydiyyat yeri
+                                        </span>
+
+                                        <strong data-i18n="profile.noData">
+                                            Məlumat yoxdur
+                                        </strong>
+
+                                    </div>
+
+                                </div>
+
+
+                                <!-- ARAYIŞ ƏMƏLLƏRİ -->
+                                <div class="certificate-actions">
+
+                                    <button type="button" class="certificate-view">
+
+                                        <i class="fa-solid fa-eye"></i>
+
+                                        <span data-i18n="profile.certificates.actions.view">
+                                            Arayışı görüntülə
+                                        </span>
+
+                                    </button>
+
+
+                                    <button type="button" class="certificate-download">
+
+                                        <i class="fa-solid fa-download"></i>
+
+                                        <span data-i18n="profile.certificates.actions.download">
+                                            Arayışı yüklə
+                                        </span>
+
+                                    </button>
 
                                 </div>
 

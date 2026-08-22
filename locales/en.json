@@ -132,9 +132,19 @@
             },
             "status": {
                 "title": "Military Status Certificate",
-                "description": "An electronic certificate confirming your current military status."
+                "description": "A certificate confirming your current military status."
             },
-            "get": "Get Certificate"
+            "get": "Get Certificate",
+            "detail": {
+                "fullName": "Full name",
+                "fin": "FIN",
+                "registrationStatus": "Registration status",
+                "registrationPlace": "Registration place"
+            },
+            "actions": {
+                "view": "View Certificate",
+                "download": "Download Certificate"
+            }
         },
         "payment": {
             "title": "Payments",

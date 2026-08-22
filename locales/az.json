@@ -134,7 +134,17 @@
                 "title": "Hərbi status haqqında arayış",
                 "description": "Cari hərbi statusunuzu təsdiq edən elektron arayış."
             },
-            "get": "Arayış al"
+            "get": "Arayış al",
+            "detail": {
+                "fullName": "Ad, soyad",
+                "fin": "FİN",
+                "registrationStatus": "Qeydiyyat statusu",
+                "registrationPlace": "Qeydiyyat yeri"
+            },
+            "actions": {
+                "view": "Arayışı görüntülə",
+                "download": "Arayışı yüklə"
+            }
         },
         "payment": {
             "title": "Ödənişlər",

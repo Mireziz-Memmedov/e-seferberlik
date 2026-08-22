@@ -852,6 +852,45 @@ body#login-page.dark-mode .chatbot-button:hover {
   cursor: pointer;
 }
 
+.certificate-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 25px;
+}
+.certificate-actions button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 11px 18px;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: 9px;
+  background: #ffffff;
+  color: #666;
+  font-family: "Inter", sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  transition: 0.25s;
+}
+.certificate-actions button i {
+  font-size: 14px;
+}
+.certificate-actions button:hover {
+  background: rgba(124, 125, 103, 0.08);
+  color: #7c7d67;
+  border-color: rgba(124, 125, 103, 0.2);
+}
+.certificate-actions button * {
+  cursor: pointer;
+}
+.certificate-actions .certificate-view {
+  color: #7c7d67;
+}
+.certificate-actions .certificate-download {
+  color: #666;
+}
+
 .section-card {
   padding: 30px;
   background: #ffffff;
@@ -1010,6 +1049,15 @@ body#login-page.dark-mode .chatbot-button:hover {
   }
   .dashboard-card {
     padding: 20px;
+  }
+  .certificate-actions {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+  }
+  .certificate-actions button {
+    width: 100%;
+    padding: 11px 15px;
   }
   .section-card {
     padding: 20px;
@@ -1252,6 +1300,22 @@ body#profile-page.dark-mode .dashboard-card p {
 }
 body#profile-page.dark-mode .dashboard-card .card-button {
   color: #c5c5b5;
+}
+body#profile-page.dark-mode .certificate-actions button {
+  background: #2d2e2b;
+  border-color: rgba(255, 255, 255, 0.08);
+  color: #aaa;
+}
+body#profile-page.dark-mode .certificate-actions button:hover {
+  background: rgba(255, 255, 255, 0.07);
+  color: #d0d0c2;
+  border-color: rgba(255, 255, 255, 0.12);
+}
+body#profile-page.dark-mode .certificate-actions .certificate-view {
+  color: #d0d0c2;
+}
+body#profile-page.dark-mode .certificate-actions .certificate-download {
+  color: #aaa;
 }
 body#profile-page.dark-mode .section-card {
   background: #252623;

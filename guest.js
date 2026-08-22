@@ -1,165 +1,165 @@
-$(document).ready(function () {
+// $(document).ready(function () {
 
-    $('.minimenu .btn').click(function (e) {
-        e.preventDefault();
-        $(this).next('.dropdown').slideToggle();
-    });
+//     $('.minimenu .btn').click(function (e) {
+//         e.preventDefault();
+//         $(this).next('.dropdown').slideToggle();
+//     });
 
-    $(document).click(function (e) {
-        if (!$(e.target).closest('.minimenu .btn').length && !$(e.target).closest('.dropdown').length) {
-            $('.dropdown').slideUp();
-        }
-    });
+//     $(document).click(function (e) {
+//         if (!$(e.target).closest('.minimenu .btn').length && !$(e.target).closest('.dropdown').length) {
+//             $('.dropdown').slideUp();
+//         }
+//     });
 
-    $('.minimenu .dropdown .option a').click(function (e) {
-        e.preventDefault();
+//     $('.minimenu .dropdown .option a').click(function (e) {
+//         e.preventDefault();
 
-        var target = $(this).attr('href');
+//         var target = $(this).attr('href');
 
-        $('html, body').animate({
-            scrollTop: $(target).offset().top - $('header').outerHeight()
-        }, 500, function () {
-            $('.dropdown').slideUp();
-        });
-    });
+//         $('html, body').animate({
+//             scrollTop: $(target).offset().top - $('header').outerHeight()
+//         }, 500, function () {
+//             $('.dropdown').slideUp();
+//         });
+//     });
 
-    $('.menu .box').click(function (e) {
-        e.preventDefault();
-        window.location.href = "./guest.html";
-    });
+//     $('.menu .box').click(function (e) {
+//         e.preventDefault();
+//         window.location.href = "./guest.html";
+//     });
 
-    // chatbot
-    const chatbotButton = document.querySelector(".chatbot-button");
+//     // chatbot
+//     const chatbotButton = document.querySelector(".chatbot-button");
 
-    if (chatbotButton) {
+//     if (chatbotButton) {
 
-        let isDragging = false;
-        let moved = false;
+//         let isDragging = false;
+//         let moved = false;
 
-        let startX = 0;
-        let startY = 0;
+//         let startX = 0;
+//         let startY = 0;
 
-        let startLeft = 0;
-        let startTop = 0;
+//         let startLeft = 0;
+//         let startTop = 0;
 
-        chatbotButton.addEventListener("pointerdown", function (e) {
+//         chatbotButton.addEventListener("pointerdown", function (e) {
 
-            isDragging = true;
-            moved = false;
+//             isDragging = true;
+//             moved = false;
 
-            const rect = chatbotButton.getBoundingClientRect();
+//             const rect = chatbotButton.getBoundingClientRect();
 
-            startX = e.clientX;
-            startY = e.clientY;
+//             startX = e.clientX;
+//             startY = e.clientY;
 
-            startLeft = rect.left;
-            startTop = rect.top;
+//             startLeft = rect.left;
+//             startTop = rect.top;
 
-            // right / bottom artıq istifadə olunmasın
-            chatbotButton.style.right = "auto";
-            chatbotButton.style.bottom = "auto";
+//             // right / bottom artıq istifadə olunmasın
+//             chatbotButton.style.right = "auto";
+//             chatbotButton.style.bottom = "auto";
 
-            chatbotButton.style.left = startLeft + "px";
-            chatbotButton.style.top = startTop + "px";
+//             chatbotButton.style.left = startLeft + "px";
+//             chatbotButton.style.top = startTop + "px";
 
-            chatbotButton.classList.add("dragging");
-
-
-            chatbotButton.setPointerCapture(e.pointerId);
-
-            e.preventDefault();
-        });
+//             chatbotButton.classList.add("dragging");
 
 
-        document.addEventListener("pointermove", function (e) {
+//             chatbotButton.setPointerCapture(e.pointerId);
 
-            if (!isDragging) return;
-
-            const deltaX = e.clientX - startX;
-            const deltaY = e.clientY - startY;
-
-            if (Math.abs(deltaX) > 3 || Math.abs(deltaY) > 3) {
-                moved = true;
-            }
-
-            const buttonWidth = chatbotButton.offsetWidth;
-            const buttonHeight = chatbotButton.offsetHeight;
-
-            const gap = 30;
-
-            let newLeft = startLeft + deltaX;
-            let newTop = startTop + deltaY;
+//             e.preventDefault();
+//         });
 
 
-            // SOL
-            newLeft = Math.max(
-                gap,
-                newLeft
-            );
+//         document.addEventListener("pointermove", function (e) {
+
+//             if (!isDragging) return;
+
+//             const deltaX = e.clientX - startX;
+//             const deltaY = e.clientY - startY;
+
+//             if (Math.abs(deltaX) > 3 || Math.abs(deltaY) > 3) {
+//                 moved = true;
+//             }
+
+//             const buttonWidth = chatbotButton.offsetWidth;
+//             const buttonHeight = chatbotButton.offsetHeight;
+
+//             const gap = 30;
+
+//             let newLeft = startLeft + deltaX;
+//             let newTop = startTop + deltaY;
 
 
-            // SAĞ
-            newLeft = Math.min(
-                newLeft,
-                window.innerWidth - buttonWidth - gap
-            );
+//             // SOL
+//             newLeft = Math.max(
+//                 gap,
+//                 newLeft
+//             );
 
 
-            // YUXARI
-            newTop = Math.max(
-                gap,
-                newTop
-            );
+//             // SAĞ
+//             newLeft = Math.min(
+//                 newLeft,
+//                 window.innerWidth - buttonWidth - gap
+//             );
 
 
-            // AŞAĞI
-            newTop = Math.min(
-                newTop,
-                window.innerHeight - buttonHeight - gap
-            );
+//             // YUXARI
+//             newTop = Math.max(
+//                 gap,
+//                 newTop
+//             );
 
 
-            chatbotButton.style.left = newLeft + "px";
-            chatbotButton.style.top = newTop + "px";
-
-            e.preventDefault();
-
-        }, { passive: false });
-
-
-        document.addEventListener("pointerup", function (e) {
-
-            if (!isDragging) return;
-
-            isDragging = false;
-
-            chatbotButton.classList.remove("dragging");
-
-            if (chatbotButton.hasPointerCapture(e.pointerId)) {
-                chatbotButton.releasePointerCapture(e.pointerId);
-            }
-
-        });
+//             // AŞAĞI
+//             newTop = Math.min(
+//                 newTop,
+//                 window.innerHeight - buttonHeight - gap
+//             );
 
 
-        document.addEventListener("pointercancel", function () {
+//             chatbotButton.style.left = newLeft + "px";
+//             chatbotButton.style.top = newTop + "px";
 
-            isDragging = false;
+//             e.preventDefault();
 
-            chatbotButton.classList.remove("dragging");
-
-        });
+//         }, { passive: false });
 
 
-        // Sürüşdürmə yoxdursa chatbot.html-ə keç
-        chatbotButton.addEventListener("click", function (e) {
+//         document.addEventListener("pointerup", function (e) {
 
-            if (moved) {
-                e.preventDefault();
-                moved = false;
-            }
+//             if (!isDragging) return;
 
-        });
-    }
+//             isDragging = false;
 
-});
+//             chatbotButton.classList.remove("dragging");
+
+//             if (chatbotButton.hasPointerCapture(e.pointerId)) {
+//                 chatbotButton.releasePointerCapture(e.pointerId);
+//             }
+
+//         });
+
+
+//         document.addEventListener("pointercancel", function () {
+
+//             isDragging = false;
+
+//             chatbotButton.classList.remove("dragging");
+
+//         });
+
+
+//         // Sürüşdürmə yoxdursa chatbot.html-ə keç
+//         chatbotButton.addEventListener("click", function (e) {
+
+//             if (moved) {
+//                 e.preventDefault();
+//                 moved = false;
+//             }
+
+//         });
+//     }
+
+// });

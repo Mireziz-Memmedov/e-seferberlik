@@ -1,195 +1,195 @@
-#guest-page
-    min-height: 100dvh
-    display: flex
-    flex-direction: column
-    background: #f5f5f2
-    font-family: 'Inter', sans-serif
-    color: #212529
+// #guest-page
+//     min-height: 100dvh
+//     display: flex
+//     flex-direction: column
+//     background: #f5f5f2
+//     font-family: 'Inter', sans-serif
+//     color: #212529
 
-#guest-header
-    position: fixed
-    top: 0
-    left: 0
-    width: 100%
-    z-index: 1000
-    padding: 20px 0 0
-    background: rgba(255, 255, 255, 0.8)
-    backdrop-filter: blur(12px)
-    border-bottom: 1px solid rgba(0, 0, 0, 0.08)
+// #guest-header
+//     position: fixed
+//     top: 0
+//     left: 0
+//     width: 100%
+//     z-index: 1000
+//     padding: 20px 0 0
+//     background: rgba(255, 255, 255, 0.8)
+//     backdrop-filter: blur(12px)
+//     border-bottom: 1px solid rgba(0, 0, 0, 0.08)
 
-    .brand *
-        cursor: pointer
+//     .brand *
+//         cursor: pointer
 
-    .brand
-        display: flex
-        align-items: center
-        text-decoration: none
+//     .brand
+//         display: flex
+//         align-items: center
+//         text-decoration: none
 
-        .brand-logo
-            img
-                width: 65px
-                display: block
+//         .brand-logo
+//             img
+//                 width: 65px
+//                 display: block
 
-        .brand-text
-            margin-left: 12px
+//         .brand-text
+//             margin-left: 12px
 
-            h1
-                margin: 0
-                color: #7c7d67
-                font-size: 25px
-                font-weight: 700
+//             h1
+//                 margin: 0
+//                 color: #7c7d67
+//                 font-size: 25px
+//                 font-weight: 700
 
-            p
-                margin: 2px 0 0
-                color: #7c7d67
-                font-size: 14px
+//             p
+//                 margin: 2px 0 0
+//                 color: #7c7d67
+//                 font-size: 14px
 
-    .language
-        display: flex
-        align-items: center
-        gap: 5px
+//     .language
+//         display: flex
+//         align-items: center
+//         gap: 5px
 
-        span
-            padding: 5px 8px
-            color: #777
-            font-size: 14px
-            cursor: pointer
-            border-radius: 5px
-            transition: 0.3s
+//         span
+//             padding: 5px 8px
+//             color: #777
+//             font-size: 14px
+//             cursor: pointer
+//             border-radius: 5px
+//             transition: 0.3s
 
-            &:hover
-                color: #c0a916
+//             &:hover
+//                 color: #c0a916
 
-            &.active
-                color: #7c7d67
-                font-weight: 700
-                background: rgba(124, 125, 103, 0.1)
+//             &.active
+//                 color: #7c7d67
+//                 font-weight: 700
+//                 background: rgba(124, 125, 103, 0.1)
 
-    .menu
-        position: relative
-        margin: 20px 0 0
-        padding: 15px
-        display: flex
-        justify-content: flex-start
-        align-items: center
-        background-color: #7c7d67
+//     .menu
+//         position: relative
+//         margin: 20px 0 0
+//         padding: 15px
+//         display: flex
+//         justify-content: flex-start
+//         align-items: center
+//         background-color: #7c7d67
 
-        &::before
-            content: ""
-            position: absolute
-            top: 0
-            bottom: 0
-            left: 50%
-            width: 100vw
-            transform: translateX(-50%)
-            background-color: #7c7d67
-            z-index: -1
+//         &::before
+//             content: ""
+//             position: absolute
+//             top: 0
+//             bottom: 0
+//             left: 50%
+//             width: 100vw
+//             transform: translateX(-50%)
+//             background-color: #7c7d67
+//             z-index: -1
 
-        .box
-            .icon
-                i
-                    color: #ffffff
-                    font-size: 18px
-                    cursor: pointer
-        nav
-            a
-                color: #ffffff
-                margin-left: 30px
-                font-size: 12px
-                &:hover
-                    color: #c0a916
-                    cursor: pointer
-        .minimenu
-            position: relative
-            display: none
-            background-color: #7c7d67
-            border-radius: 10%
-            margin-left: 20px
-            h5
-                color: #ffffff
-                font-size: 10px
-                &:hover
-                    h5
-                        color: #c0a916
+//         .box
+//             .icon
+//                 i
+//                     color: #ffffff
+//                     font-size: 18px
+//                     cursor: pointer
+//         nav
+//             a
+//                 color: #ffffff
+//                 margin-left: 30px
+//                 font-size: 12px
+//                 &:hover
+//                     color: #c0a916
+//                     cursor: pointer
+//         .minimenu
+//             position: relative
+//             display: none
+//             background-color: #7c7d67
+//             border-radius: 10%
+//             margin-left: 20px
+//             h5
+//                 color: #ffffff
+//                 font-size: 10px
+//                 &:hover
+//                     h5
+//                         color: #c0a916
 
-            .dropdown
-                display: none
-                position: absolute
-                background-color: #7c7d67
-                min-width: 110px
-                box-shadow: 0 2px 6px #7c7c7c
-                top: 100%
-                left: 0
-                z-index: 100
-                border-radius: 0 10px 10px
+//             .dropdown
+//                 display: none
+//                 position: absolute
+//                 background-color: #7c7d67
+//                 min-width: 110px
+//                 box-shadow: 0 2px 6px #7c7c7c
+//                 top: 100%
+//                 left: 0
+//                 z-index: 100
+//                 border-radius: 0 10px 10px
 
-                .option
-                    display: flex
-                    flex-direction: column
+//                 .option
+//                     display: flex
+//                     flex-direction: column
 
-                    a
-                        color: #ffffff
-                        margin: 5px
-                        font-size: 8px
-                        &:hover
-                            cursor: pointer
-                            color: #c0a916
+//                     a
+//                         color: #ffffff
+//                         margin: 5px
+//                         font-size: 8px
+//                         &:hover
+//                             cursor: pointer
+//                             color: #c0a916
 
-@media (max-width: 576px)
+// @media (max-width: 576px)
 
-    #guest-page
+//     #guest-page
 
-        #guest-header
+//         #guest-header
 
-            .menu
+//             .menu
 
-            .brand
+//             .brand
 
-                .brand-logo
+//                 .brand-logo
 
-                    img
-                        width: 50px
+//                     img
+//                         width: 50px
 
-                .brand-text
-                    margin-left: 8px
+//                 .brand-text
+//                     margin-left: 8px
 
-                    h1
-                        font-size: 20px
+//                     h1
+//                         font-size: 20px
 
-                    p
-                        font-size: 12px
+//                     p
+//                         font-size: 12px
 
-            .language
+//             .language
 
-                span
-                    padding: 0
-                    font-size: 9px
+//                 span
+//                     padding: 0
+//                     font-size: 9px
 
-@media (max-width: 830px)
-    #guest-page
+// @media (max-width: 830px)
+//     #guest-page
 
-        #guest-header
+//         #guest-header
 
-            .menu
+//             .menu
 
-                nav
-                    display: none !important
+//                 nav
+//                     display: none !important
 
-                .minimenu
-                    display: block
-                    width: 45px
-                    height: 30px
-                    border: 2px solid #767373
-                    border-radius: 6px
+//                 .minimenu
+//                     display: block
+//                     width: 45px
+//                     height: 30px
+//                     border: 2px solid #767373
+//                     border-radius: 6px
 
-                    .btn
-                        width: 100%
-                        height: 100%
-                        padding: 0
-                        display: flex
-                        align-items: center
-                        justify-content: center
+//                     .btn
+//                         width: 100%
+//                         height: 100%
+//                         padding: 0
+//                         display: flex
+//                         align-items: center
+//                         justify-content: center
 
-                        h5
-                            margin: 0
-                            font-size: 10px
+//                         h5
+//                             margin: 0
+//                             font-size: 10px

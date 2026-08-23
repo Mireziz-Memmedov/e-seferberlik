@@ -170,6 +170,14 @@ $(document).ready(function () {
 
     }
 
+    // ==============================
+    // TƏRCÜMƏNİ YENİDƏN TƏTBİQ ET
+    // ==============================
+
+    window.applyTranslations = function () {
+        loadLanguage(currentLanguage);
+    };
+
 
     // ==============================
     // JSON-DAN AÇARI TAP

@@ -52,7 +52,7 @@ $(document).ready(function () {
         scrollToBottom();
     }
 
-    // Bot yazır indikatoru
+    // Bot ... indikatoru
     function addTypingMessage() {
 
         const html = `
@@ -63,7 +63,7 @@ $(document).ready(function () {
                 </div>
 
                 <div class="message-content">
-                    <p>Yazır<span class="typing-dots">.</span></p>
+                    <p><span class="typing-dots">.</span></p>
                 </div>
 
             </div>
@@ -110,7 +110,7 @@ $(document).ready(function () {
         // User mesajını göstər
         addUserMessage(message);
 
-        // Bot yazır göstəricisini göstər
+        // Bot ... göstəricisini göstər
         addTypingMessage();
 
         // Input-u təmizlə
@@ -136,7 +136,7 @@ $(document).ready(function () {
                 // Animasiya dayandırılır
                 clearInterval(typingInterval);
 
-                // "Yazır..." mesajını sil
+                // "..." mesajını sil
                 $('.typing-message').remove();
 
                 // Bot cavabını göstər
@@ -149,7 +149,7 @@ $(document).ready(function () {
                 // Animasiya dayandırılır
                 clearInterval(typingInterval);
 
-                // "Yazır..." mesajını sil
+                // "..." mesajını sil
                 $('.typing-message').remove();
 
                 console.log(xhr);
